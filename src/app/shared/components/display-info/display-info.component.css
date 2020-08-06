@@ -3,10 +3,11 @@
     width: 100%;
 }
 #bottom-left {
-    width: 50%;
+    width: 60%;
 }
 #bottom-right {
-    width: auto;
+    text-align: right;
+    width: 40%;
 }
 .container {
     padding: 1rem;
