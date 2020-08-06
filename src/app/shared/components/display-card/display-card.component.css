@@ -1,8 +1,8 @@
 .container--person-card {
     border: 1px solid black;
     display: inline-flex;
-    margin: 0.5rem 0;
-    width: 100%;
+    margin: 0.5rem 0.5rem;
+    width: 95%;
 }
 .container--photo {
     display: flex;

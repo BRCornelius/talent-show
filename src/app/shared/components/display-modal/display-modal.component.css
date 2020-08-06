@@ -30,11 +30,11 @@ h1 {
     font-weight: 600;
 }
 h2 {
-    font-size: 2rem;
+    font-size: 1.75rem;
     font-weight: 600;
 }
 p {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
 }
 .bottom-rows {
     width: 100%;
@@ -43,4 +43,9 @@ p {
 }
 .skills {
     text-align: center;
+}
+.container {
+    max-height: 30rem;
+    padding: 0.5rem 0;
+    overflow-y: scroll;
 }
