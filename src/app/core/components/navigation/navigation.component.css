@@ -1,0 +1,15 @@
+.nav {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+a {
+    color: white;
+    text-decoration-line: none;
+    padding: 1rem;
+}
+
+img {
+    width: 5.5rem;
+}

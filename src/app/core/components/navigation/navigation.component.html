@@ -1,0 +1,12 @@
+<div class="nav">
+  <div class="image-container">
+    <img src="https://assets.corneliuses.com/photos/iSeatz/iseatz-squarelogo.png" />
+  </div>
+  <a
+    *ngFor="let link of nav.navLinks"
+    routerLink={{link.path}}
+    routerLinkActive={nav.checkActiveNavLink(link.label)}
+    (click)="nav.updateActiveNavLink(link.label)">
+    {{link.label}}
+  </a>
+</div>

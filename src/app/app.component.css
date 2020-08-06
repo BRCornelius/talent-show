@@ -1,0 +1,7 @@
+.app-container {
+    min-height: 45rem;
+}
+.navigation-container {
+    background-color: red;
+    width: max-content;
+}
