@@ -9,6 +9,7 @@ import { CastModule } from './cast/cast.module';
 import { NavigationComponent } from './core/components';
 import { NavigationService } from './core/services';
 import {MatSidenavModule} from '@angular/material/sidenav';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import {MatSidenavModule} from '@angular/material/sidenav';
     CoreModule,
     BrowserAnimationsModule,
     CastModule,
-    MatSidenavModule
+    MatSidenavModule,
+    SharedModule
   ],
   providers: [NavigationService],
   bootstrap: [AppComponent],

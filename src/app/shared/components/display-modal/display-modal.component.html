@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="top-row">
+    <div class="image-container">
+      <img src={{data.photo}} />
+    </div>
+    <div class="basic-info">
+      <h1>{{data.name}}<br>
+        <small class="subtitle">{{data.title}}</small><br>
+        <small class="email">{{data.email}}</small>
+      </h1>
+      <div class="basic-info-row">
+        <p class="basic-info-item">Date Hired: {{data.hire}}</p>
+        <p class="basic-info-item">Department: {{data.dept}}</p>
+        <p class="basic-info-item">Team: {{data.team}}</p>
+        <p class="basic-info-item">Supervisor: {{data.super}}</p>
+      </div>
+    </div>
+  </div>
+  <div class="bottom-rows">
+    <div class="projects">
+      <h2>Projects</h2>
+      <p *ngFor="let project of data.projects">
+        {{project[0]}}: {{project[1]}}%
+      </p>
+    </div>
+    <div class="clients">
+      <h2>Clients</h2>
+      <p *ngFor="let client of data.client">
+        {{client[0]}}: {{client[1]}}%
+      </p>
+    </div>
+  </div>
+  <div class="skills">
+    <h2>Skills</h2>
+    <p *ngFor="let skill of data.skills">
+      {{skill[0]}}: {{skill[1]}}%
+    </p>
+  </div>
+</div>

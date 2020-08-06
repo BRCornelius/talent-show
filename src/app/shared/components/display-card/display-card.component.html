@@ -1,0 +1,11 @@
+<div class="container--person-card" (click)="toggleOpen()">
+  <div class="container--photo">
+    <img src={{item.photo}} />
+  </div>
+  <div class="container--info">
+    <shared-display-info
+      [topText]="item.name"
+      [bottomLeftText]="item.title"
+      [bottomRightText]="item.team"></shared-display-info>
+  </div>
+</div>

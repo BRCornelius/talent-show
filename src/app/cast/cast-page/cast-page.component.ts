@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CastService } from '../services/cast.service';
 
 @Component({
   selector: 'cast-page',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CastPageComponent implements OnInit {
 
-  constructor() { }
+  constructor(private cast: CastService) { }
 
   ngOnInit() {
+    this.cast.getEmployees();
   }
 
 }

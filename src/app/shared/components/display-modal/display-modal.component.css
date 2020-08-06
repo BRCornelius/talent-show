@@ -1,0 +1,46 @@
+.top-row {
+    display: inline-flex;
+}
+.subtitle {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+.email {
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+.image-container {
+    width: 30%;
+}
+img {
+    width: 100%;
+}
+.basic-info {
+    width: 70%;
+    padding: 0 1rem;
+}
+.basic-info-row {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0;
+    width: 100%;
+}
+h1 {
+    font-size: 3rem;
+    font-weight: 600;
+}
+h2 {
+    font-size: 2rem;
+    font-weight: 600;
+}
+p {
+    font-size: 1.5rem;
+}
+.bottom-rows {
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-around;
+}
+.skills {
+    text-align: center;
+}

@@ -1,0 +1,17 @@
+.container--person-card {
+    border: 1px solid black;
+    display: inline-flex;
+    height: 6rem;
+    width: 100%;
+}
+.container--photo {
+    width: 15%;
+}
+img {
+    border-right: 1px solid black;
+    height: 100%;
+    width: 100%;
+}
+.container--info {
+    width: 90%;
+}

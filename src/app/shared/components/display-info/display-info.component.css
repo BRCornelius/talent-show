@@ -1,0 +1,20 @@
+.bottom-row {
+    display: inline-flex;
+    width: 100%;
+}
+#bottom-left {
+    width: 50%;
+}
+#bottom-right {
+    width: auto;
+}
+.container {
+    padding: 1rem;
+}
+h3 {
+    font-size: 2rem;
+    font-weight: 600;
+}
+p {
+    font-size: 1.25rem;
+}
