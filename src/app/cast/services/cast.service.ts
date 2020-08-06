@@ -12,6 +12,6 @@ export class CastService {
   employees: any[];
 
   getEmployees: Function = (): Subscription => this.http.get('https://vk55jlt9x8.execute-api.us-east-1.amazonaws.com/beta/get-employees')
-    .subscribe((res: any) => this.employees = res.data);
+    .subscribe((res: any) => { this.employees = res.data; console.log(res.data) });
 
 }

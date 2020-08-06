@@ -1,17 +1,20 @@
 .container--person-card {
     border: 1px solid black;
     display: inline-flex;
-    height: 6rem;
+    margin: 0.5rem 0;
     width: 100%;
 }
 .container--photo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     width: 15%;
 }
 img {
-    border-right: 1px solid black;
-    height: 100%;
+    padding-bottom: 0;
     width: 100%;
 }
 .container--info {
+    border-left: 1px solid black;
     width: 90%;
 }
