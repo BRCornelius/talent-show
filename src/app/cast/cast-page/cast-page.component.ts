@@ -8,7 +8,7 @@ import { CastService } from '../services/cast.service';
 })
 export class CastPageComponent implements OnInit {
 
-  constructor(private cast: CastService) { }
+  constructor(public cast: CastService) { }
 
   ngOnInit() {
     this.cast.getEmployees();
