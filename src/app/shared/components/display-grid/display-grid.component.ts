@@ -10,5 +10,6 @@ export class DisplayGridComponent {
   constructor() { }
 
   @Input() items: any[];
+  @Input() path: string;
 
 }

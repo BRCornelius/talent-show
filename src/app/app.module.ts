@@ -10,6 +10,7 @@ import { NavigationComponent } from './core/components';
 import { NavigationService } from './core/services';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { SharedModule } from './shared/shared.module';
+import { TeamModule } from './team/team.module';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { SharedModule } from './shared/shared.module';
     BrowserAnimationsModule,
     CastModule,
     MatSidenavModule,
-    SharedModule
+    SharedModule,
+    TeamModule
   ],
   providers: [NavigationService],
   bootstrap: [AppComponent],

@@ -1,39 +1,43 @@
 <div class="container">
   <div class="top-row">
     <div class="image-container">
-      <img src={{data.photo}} />
+      <img src={{data.item.photo}} />
     </div>
     <div class="basic-info">
-      <h1>{{data.name}}<br>
-        <small class="subtitle">{{data.title}}</small><br>
-        <small class="email">{{data.email}}</small>
+      <h1>{{data.item.name}}<br>
+        <small class="subtitle" *ngIf="data.path === 'cast'">{{data.item.title}}</small><br>
+        <small class="email" *ngIf="data.path === 'cast'">{{data.item.email}}</small>
       </h1>
       <div class="basic-info-row">
-        <p class="basic-info-item">Date Hired: {{data.hire}}</p>
-        <p class="basic-info-item">Department: {{data.dept}}</p>
-        <p class="basic-info-item">Team: {{data.team}}</p>
-        <p class="basic-info-item">Supervisor: {{data.super}}</p>
+        <p class="basic-info-item" *ngIf="data.path === 'cast'">Date Hired: {{data.item.hire}}</p>
+        <p class="basic-info-item" *ngIf="data.path === 'cast'">Department: {{data.item.dept}}</p>
+        <p class="basic-info-item" *ngIf="data.path === 'cast'">Team: {{data.item.team}}</p>
+        <p class="basic-info-item">Supervisor: {{data.item.super}}</p>
       </div>
     </div>
   </div>
   <div class="bottom-rows">
     <div class="projects">
       <h2>Projects</h2>
-      <p *ngFor="let project of data.projects">
+      <p *ngFor="let project of data.item.projects">
         {{project[0]}}: {{project[1]}}%
       </p>
     </div>
     <div class="clients">
       <h2>Clients</h2>
-      <p *ngFor="let client of data.client">
+      <p *ngFor="let client of data.item.client">
         {{client[0]}}: {{client[1]}}%
       </p>
     </div>
   </div>
-  <div class="skills">
+  <div class="skills" *ngIf="data.path === 'cast'">
     <h2>Skills</h2>
-    <p *ngFor="let skill of data.skills">
+    <p *ngFor="let skill of data.item.skills">
       {{skill[0]}}: {{skill[1]}}%
     </p>
+  </div>
+  <div class="members" *ngIf="data.path === 'teams'">
+    <h2>Team Members</h2>
+    <p *ngFor="let member of data.item.members">{{member.name}}</p>
   </div>
 </div>
