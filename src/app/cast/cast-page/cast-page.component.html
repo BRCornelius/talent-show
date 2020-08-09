@@ -1,5 +1,6 @@
 <div class="container">
   <h1>The Cast of iSeatz</h1>
+  <shared-interstitial *ngIf="!cast.employees"></shared-interstitial>
   <shared-display-grid
     [items]="cast.employees"
     [path]="'cast'"></shared-display-grid>

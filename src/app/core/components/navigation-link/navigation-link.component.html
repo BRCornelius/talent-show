@@ -1,0 +1,8 @@
+<a
+  class={{nav.checkActiveNavLink(link.label)}}
+  routerLink={{link.path}}
+  id={{link.label}}
+  routerLinkActive={{nav.checkActiveNavLink(link.label)}}
+  (click)="onClick()">
+  {{link.label}}
+</a>

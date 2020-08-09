@@ -1,3 +1,5 @@
+<h1>Our Cooperative Teams</h1>
+<shared-interstitial *ngIf="!team.teams" [topic]="'carey'"></shared-interstitial>
 <shared-display-grid
   [items]="team.teams"
   [path]="'teams'"></shared-display-grid>

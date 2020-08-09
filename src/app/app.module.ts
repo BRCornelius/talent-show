@@ -11,11 +11,14 @@ import { NavigationService } from './core/services';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { SharedModule } from './shared/shared.module';
 import { TeamModule } from './team/team.module';
+import { AdminModule } from './admin/admin.module';
+import { NavigationLinkComponent } from './core/components/navigation-link/navigation-link.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavigationComponent
+    NavigationComponent,
+    NavigationLinkComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +28,8 @@ import { TeamModule } from './team/team.module';
     CastModule,
     MatSidenavModule,
     SharedModule,
-    TeamModule
+    TeamModule,
+    AdminModule
   ],
   providers: [NavigationService],
   bootstrap: [AppComponent],

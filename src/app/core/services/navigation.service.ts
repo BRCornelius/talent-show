@@ -13,8 +13,9 @@ export class NavigationService {
   currentLabel: string = this.currentPath[0] ? this.currentPath[0].toUpperCase() + this.currentPath.substring(1) : 'Home';
   navLinks: INavLink[] = [
     { label: 'Home', path: '' },
-    { label: 'The Cast', path: 'cast' },
-    { label: 'The Teams', path: 'teams' }
+    { label: 'Cast', path: 'cast' },
+    { label: 'Teams', path: 'teams' },
+    { label: 'Admin', path: 'admin' }
   ];
 
   checkActiveNavLink: Function = (testValue: string): boolean => this.currentLabel === testValue;

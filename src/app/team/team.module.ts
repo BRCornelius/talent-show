@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { TeamRoutingModule } from './team-routing.module';
@@ -12,6 +12,7 @@ import { SharedModule } from '../shared/shared.module';
     SharedModule,
     TeamRoutingModule
   ],
-  exports: [TeamPageComponent]
+  exports: [TeamPageComponent],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })
 export class TeamModule { }

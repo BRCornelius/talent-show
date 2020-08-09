@@ -1,0 +1,33 @@
+.button-container {
+    display: flex;
+    justify-content: center;
+}
+.toggle-button {
+    background-color: inherit;
+    color: rgb(219, 23, 23);
+    cursor: pointer;
+    padding: 0.5rem;
+    border: 3px solid rgb(219, 23, 23);
+    text-decoration-line: underline;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 0.5rem;
+    width: 90%;
+}
+.menu-container {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    width: 100%;
+}
+.employee-name {
+    background-color: inherit;
+    border: 0;
+    padding: 0.5rem;
+    cursor: pointer;
+    width: 25%;
+}

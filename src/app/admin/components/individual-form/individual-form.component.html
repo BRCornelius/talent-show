@@ -1,0 +1,10 @@
+<div class="container">
+  <h1 class="instruction">
+    {{type}} Employee
+    <small class="subtitle">(All fields are required)</small>
+  </h1>
+  <p>Name</p>
+  <input class="text-input" id="name" name="name"
+    required minlength="4" [(ngModel)]="name" (ngModelChange)="name=$event">
+  <button (click)="showName()">Show</button>
+</div>

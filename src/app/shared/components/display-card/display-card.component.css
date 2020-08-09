@@ -1,5 +1,6 @@
 .container--person-card {
     border: 1px solid black;
+    cursor: pointer;
     display: inline-flex;
     margin: 0.5rem 0.5rem;
     width: 95%;

@@ -4,10 +4,8 @@
     text-align: center;
 }
 
-a {
-    color: white;
-    text-decoration-line: none;
-    padding: 1rem;
+.nav-link {
+    padding: 1rem 0;
 }
 
 img {

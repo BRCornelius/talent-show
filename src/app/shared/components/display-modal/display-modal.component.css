@@ -45,6 +45,7 @@ p {
     text-align: center;
 }
 .container {
+    cursor: not-allowed;
     max-height: 30rem;
     padding: 0.5rem 0;
     overflow-y: scroll;

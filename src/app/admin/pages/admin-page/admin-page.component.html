@@ -1,0 +1,14 @@
+<div class="container" [ngSwitch]="admin.adminRoute">
+  <div class="button-container">
+    <button
+      class="category-button"
+      id={{route}}
+      *ngFor="let route of admin.adminRoutes"
+      value={{route}}
+      (click)="admin.updateAdminRoute($event)">{{route}}</button>
+  </div>
+    <admin-page-individual *ngSwitchCase="'Individual'"></admin-page-individual>
+    <p *ngSwitchDefault>
+      Welcome to the Admin Setion
+    </p>
+</div>

@@ -1,0 +1,10 @@
+<div class="button-container">
+  <button class="toggle-button" (click)="toggleMenu()">Select Employee</button>
+</div>
+<div class="menu-container" *ngIf="toggled">
+  <button
+    class="employee-name"
+    *ngFor="let item of items"
+    (click)="admin.updateActiveEmployeeName($event)"
+    value={{stringifyItemToPass(item)}}>{{item.name}}</button>
+</div>

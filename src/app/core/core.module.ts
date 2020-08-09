@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { CorePageComponent } from './page/core-page.component';
 import { RouterModule } from '@angular/router';
 
-
 @NgModule({
   declarations: [CorePageComponent],
   imports: [
