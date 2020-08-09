@@ -6,7 +6,7 @@ import { AdminPageComponent } from './pages/admin-page/admin-page.component';
 import { SharedModule } from '../shared/shared.module';
 import { AdminPageIndividualComponent } from './pages/admin-page-individual/admin-page-individual.component';
 import { AdminSelectComponent } from './components/admin-select/admin-select.component';
-import { AdminService } from './admin.service';
+import { AdminService } from './services/admin.service';
 import { CastService } from '../cast/services/cast.service';
 import { IndividualFormComponent } from './components/individual-form/individual-form.component';
 

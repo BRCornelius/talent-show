@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { AdminService } from '../../admin.service';
+import { AdminService } from '../../services/admin.service';
 import { IEmployee } from 'src/app/cast/models';
 import { IIndividual } from '../../models/i-individual';
 import { validateIndividualEntry } from '../../util/utilities';
@@ -41,6 +41,9 @@ export class IndividualFormComponent implements OnInit {
     const submission = { name: this.name }
     if(validateIndividualEntry(submission)) {
       console.log(this.name)
+      console.log(this.admin.activeEmployee);
+    } else {
+      console.error("That is an invalid entry!")
     };
   };
 }
