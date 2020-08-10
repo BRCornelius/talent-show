@@ -35,13 +35,22 @@ export class IndividualFormComponent implements OnInit {
 
 
   showName: Function = () => {
-    const submission = {
-      name: this.name,
-      photo: this.photo,
-      dept: this.dept,
-      email: this.email,
-      title: this.title
-    }
+    const submission = {}
+    if(this.name) {
+      Object.assign(submission, { name: this.name });
+    };
+    if(this.photo) {
+      Object.assign(submission, { photo: this.photo });
+    };
+    if(this.dept) {
+      Object.assign(submission, { dept: this.dept.toLowerCase() });
+    };
+    if(this.email) {
+      Object.assign(submission, { email: this.email });
+    };
+    if(this.title) {
+      Object.assign(submission, { title: this.title });
+    };
     // if(validateIndividualEntry(submission)) {
     //   console.log(this.name)
     //   console.log(this.admin.activeEmployee);

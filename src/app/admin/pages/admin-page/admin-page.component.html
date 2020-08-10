@@ -9,7 +9,9 @@
   </div>
     <admin-page-individual *ngSwitchCase="'Individual'"></admin-page-individual>
     <admin-page-team *ngSwitchCase="'Team'"></admin-page-team>
-    <p *ngSwitchDefault>
-      Welcome to the Admin Console
-    </p>
+    <div class="default-page" *ngSwitchDefault>
+      <h1>
+        Welcome to the Admin Console
+      </h1>
+    </div>
 </div>
