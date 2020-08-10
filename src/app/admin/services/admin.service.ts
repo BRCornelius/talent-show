@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { INavLink } from 'src/app/core/models';
 import { IEmployee } from 'src/app/cast/models';
 
 @Injectable({
@@ -15,5 +14,5 @@ export class AdminService {
 
   updateActiveEmployeeName: Function = ($event) => this.activeEmployee = JSON.parse($event.target.value);
   updateAdminRoute: Function = ($event) => this.adminRoute = $event.target.value;
-
+  checkAdminRoute: Function = (route: string): boolean => this.adminRoute === route;
 }

@@ -1,5 +1,5 @@
 .button-container {
-    border-bottom: 1px solid black;
+    border-bottom: 2px solid rgb(219, 23, 23);
     background-color: rgb(219, 23, 23);
     color: white;
     width: 100%;
@@ -15,6 +15,10 @@
     padding: 0.5rem;
     width: 100%;
 }
-#Individual {
-    border-right: 1px solid white;
+#true {
+    color: rgb(219, 23, 23);
+    background-color: white;
+    font-size: 1.25rem;
+    font-weight: 400;
+    text-decoration: underline;
 }

@@ -1,8 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { AdminService } from '../../services/admin.service';
-import { IEmployee } from 'src/app/cast/models';
-import { IIndividual } from '../../models/i-individual';
-import { validateIndividualEntry } from '../../util/utilities';
 
 @Component({
   selector: 'admin-individual-form',

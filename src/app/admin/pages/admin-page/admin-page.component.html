@@ -2,7 +2,7 @@
   <div class="button-container">
     <button
       class="category-button"
-      id={{route}}
+      id={{admin.checkAdminRoute(route)}}
       *ngFor="let route of admin.adminRoutes"
       value={{route}}
       (click)="admin.updateAdminRoute($event)">{{route}}</button>
