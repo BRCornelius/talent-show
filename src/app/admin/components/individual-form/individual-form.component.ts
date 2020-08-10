@@ -35,10 +35,10 @@ export class IndividualFormComponent implements OnInit {
 
 
   showName: Function = () => {
-    const submission = {}
+    const submission = { name: this.admin.activeEmployee.name }
     if(this.name) {
       Object.assign(submission, { name: this.name });
-    };
+    }
     if(this.photo) {
       Object.assign(submission, { photo: this.photo });
     };
@@ -57,6 +57,6 @@ export class IndividualFormComponent implements OnInit {
     // } else {
     //   console.error("That is an invalid entry!")
     // };
-    console.log(JSON.stringify(submission))
+    this.admin.sendRequest(submission);
   };
 }

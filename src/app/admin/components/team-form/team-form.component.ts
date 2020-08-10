@@ -23,7 +23,7 @@ export class TeamFormComponent implements OnInit {
   photo: string;
 
   showName: Function = () => {
-    const submission = {};
+    const submission = { name: this.admin.activeTeam.name };
     if(this.name) {
       Object.assign(submission, { name: this.name });
     };
@@ -36,6 +36,6 @@ export class TeamFormComponent implements OnInit {
     // } else {
     //   console.error("That is an invalid entry!")
     // };
-    console.log(JSON.stringify(submission))
+    this.admin.sendRequest(submission);
   };
 }

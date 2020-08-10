@@ -8,6 +8,8 @@ import { AdminService } from '../../services/admin.service';
 })
 export class AdminPageComponent {
 
-  constructor(public admin: AdminService) { }
+  constructor(public admin: AdminService) { 
+    this.admin.inputting = true;
+  }
 
 }

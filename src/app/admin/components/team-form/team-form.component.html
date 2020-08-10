@@ -1,15 +1,8 @@
 <div class="container">
   <h1 class="instruction">
-    {{type}} Team
+    {{type}} {{admin.activeTeam.name}}
     <small class="subtitle" *ngIf="type === 'Add'">(All fields are required)</small>
   </h1>
-  <div class="row-container">
-    <div class="label-container">
-      <p>Name</p>
-    </div>
-    <input class="text-input" id="name" name="name" placeholder={{admin.activeTeam.name}}
-    required="!edit" minlength="4" [(ngModel)]="name" (ngModelChange)="name=$event">
-  </div>
   <div class="row-container">
     <div class="label-container">
       <p>Photo</p>
@@ -18,6 +11,6 @@
     required="!edit" minlength="4" [(ngModel)]="photo" (ngModelChange)="photo=$event">
   </div>
   <div class="button-container">
-    <button (click)="showName()">Console Log Submission</button>
+    <button (click)="showName()">Submit</button>
   </div>
 </div>
