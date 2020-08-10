@@ -2,13 +2,14 @@
   <div class="button-container">
     <button
       class="category-button"
-      id={{admin.checkAdminRoute(route)}}
       *ngFor="let route of admin.adminRoutes"
+      id={{admin.checkAdminRoute(route)}}
       value={{route}}
       (click)="admin.updateAdminRoute($event)">{{route}}</button>
   </div>
     <admin-page-individual *ngSwitchCase="'Individual'"></admin-page-individual>
+    <admin-page-team *ngSwitchCase="'Team'"></admin-page-team>
     <p *ngSwitchDefault>
-      Welcome to the Admin Setion
+      Welcome to the Admin Console
     </p>
 </div>

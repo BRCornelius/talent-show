@@ -9,9 +9,18 @@ import { AdminSelectComponent } from './components/admin-select/admin-select.com
 import { AdminService } from './services/admin.service';
 import { CastService } from '../cast/services/cast.service';
 import { IndividualFormComponent } from './components/individual-form/individual-form.component';
+import { AdminPageTeamComponent } from './pages/admin-page-team/admin-page-team.component';
+import { TeamFormComponent } from './components/team-form/team-form.component';
 
 @NgModule({
-  declarations: [AdminPageComponent, AdminPageIndividualComponent, AdminSelectComponent, IndividualFormComponent],
+  declarations: [
+    AdminSelectComponent,
+    AdminPageComponent,
+    AdminPageIndividualComponent,
+    AdminPageTeamComponent,
+    IndividualFormComponent,
+    TeamFormComponent
+  ],
   imports: [
     CommonModule,
     FormsModule,
@@ -19,7 +28,7 @@ import { IndividualFormComponent } from './components/individual-form/individual
   ],
   bootstrap: [AdminPageComponent],
   entryComponents: [AdminPageComponent],
-  exports: [AdminPageComponent, AdminPageIndividualComponent],
+  exports: [AdminPageComponent],
   providers: [AdminService, CastService]
 })
 export class AdminModule { }

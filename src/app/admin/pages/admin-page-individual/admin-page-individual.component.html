@@ -1,4 +1,6 @@
 <div class="container">
-    <admin-select [items]="cast.employees"></admin-select>
+    <admin-select
+        [items]="cast.employees"
+        [label]="'Teammate'"></admin-select>
     <admin-individual-form [edit]="true" *ngIf="admin.activeEmployee"></admin-individual-form>
 </div>

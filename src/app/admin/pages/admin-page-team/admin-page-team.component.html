@@ -1,0 +1,6 @@
+<div class="container">
+  <admin-select
+    [items]="team.teams"
+    [label]="'Team'"></admin-select>
+  <admin-team-form [edit]="true" *ngIf="admin.activeTeam"></admin-team-form>
+</div>

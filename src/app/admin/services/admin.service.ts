@@ -9,10 +9,12 @@ export class AdminService {
   constructor() { }
 
   activeEmployee: IEmployee;
+  activeTeam: any;
   adminRoute: string;
   adminRoutes: string[] = ['Individual', 'Team'];
 
   updateActiveEmployeeName: Function = ($event) => this.activeEmployee = JSON.parse($event.target.value);
+  updateActiveTeam: Function = ($event) => this.activeTeam = JSON.parse($event.target.value);
   updateAdminRoute: Function = ($event) => this.adminRoute = $event.target.value;
   checkAdminRoute: Function = (route: string): boolean => this.adminRoute === route;
 }
