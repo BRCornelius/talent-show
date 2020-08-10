@@ -11,12 +11,10 @@
     text-decoration-line: underline;
     font-size: 1rem;
     font-weight: 600;
-    margin-top: 0.5rem;
     width: 90%;
 }
 .menu-container {
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
+    border: 1px solid black;
     border-radius: 1rem;
     display: flex;
     justify-content: center;

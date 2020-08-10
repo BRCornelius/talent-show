@@ -1,10 +1,44 @@
 <div class="container">
   <h1 class="instruction">
     {{type}} Employee
-    <small class="subtitle">(All fields are required)</small>
+    <small class="subtitle" *ngIf="type === 'Add'">(All fields are required)</small>
   </h1>
-  <p>Name</p>
-  <input class="text-input" id="name" name="name"
-    required minlength="4" [(ngModel)]="name" (ngModelChange)="name=$event">
-  <button (click)="showName()">Show</button>
+  <div class="row-container">
+    <div class="label-container">
+      <p>Name</p>
+    </div>
+    <input class="text-input" id="name" name="name" placeholder={{admin.activeEmployee.name}}
+    required="!edit" minlength="4" [(ngModel)]="name" (ngModelChange)="name=$event">
+  </div>
+  <div class="row-container">
+    <div class="label-container">
+      <p>Photo</p>
+    </div>
+    <input class="text-input" id="photo" name="photo" placeholder={{admin.activeEmployee.photo}}
+    required="!edit" minlength="4" [(ngModel)]="photo" (ngModelChange)="photo=$event">
+  </div>
+  <div class="row-container">
+    <div class="label-container">
+      <p>Department</p>
+    </div>
+    <input class="text-input" id="dept" name="dept" placeholder={{admin.activeEmployee.dept}}
+    required="!edit" minlength="4" [(ngModel)]="dept" (ngModelChange)="dept=$event">
+  </div>
+  <div class="row-container">
+    <div class="label-container">
+      <p>Email</p>
+    </div>
+    <input class="text-input" id="email" name="email" placeholder={{admin.activeEmployee.email}}
+    required="!edit" minlength="4" [(ngModel)]="email" (ngModelChange)="email=$event">
+  </div>
+  <div class="row-container">
+    <div class="label-container">
+      <p>Title</p>
+    </div>
+    <input class="text-input" id="title" name="title" placeholder={{admin.activeEmployee.title}}
+    required="!edit" minlength="4" [(ngModel)]="title" (ngModelChange)="title=$event">
+  </div>
+  <div class="button-container">
+    <button (click)="showName()">Console Log Submission</button>
+  </div>
 </div>

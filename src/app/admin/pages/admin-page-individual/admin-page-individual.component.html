@@ -1,2 +1,4 @@
-<admin-select [items]="cast.employees"></admin-select>
-<admin-individual-form [edit]="true"></admin-individual-form>
+<div class="container">
+    <admin-select [items]="cast.employees"></admin-select>
+    <admin-individual-form [edit]="true" *ngIf="admin.activeEmployee"></admin-individual-form>
+</div>

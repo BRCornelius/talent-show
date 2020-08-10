@@ -14,12 +14,12 @@ export class IndividualFormComponent implements OnInit {
   constructor(public admin: AdminService) { }
 
   ngOnInit() {
+    this.type = this.edit ? "Edit" : "Add";
   }
 
   @Input() edit: boolean;
 
-  activeEmployee: IEmployee | null = this.edit ? this.admin.activeEmployee : null;
-  type: string = this.edit ? "Edit" : "Add";
+  type: string;
 
   client: string[][];
   dept: string;
@@ -38,12 +38,19 @@ export class IndividualFormComponent implements OnInit {
 
 
   showName: Function = () => {
-    const submission = { name: this.name }
-    if(validateIndividualEntry(submission)) {
-      console.log(this.name)
-      console.log(this.admin.activeEmployee);
-    } else {
-      console.error("That is an invalid entry!")
-    };
+    const submission = {
+      name: this.name,
+      photo: this.photo,
+      dept: this.dept,
+      email: this.email,
+      title: this.title
+    }
+    // if(validateIndividualEntry(submission)) {
+    //   console.log(this.name)
+    //   console.log(this.admin.activeEmployee);
+    // } else {
+    //   console.error("That is an invalid entry!")
+    // };
+    console.log(JSON.stringify(submission))
   };
 }

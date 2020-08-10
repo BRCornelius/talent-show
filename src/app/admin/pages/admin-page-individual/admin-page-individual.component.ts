@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CastService } from 'src/app/cast/services/cast.service';
+import { AdminService } from '../../services/admin.service';
 
 @Component({
   selector: 'admin-page-individual',
@@ -8,7 +9,7 @@ import { CastService } from 'src/app/cast/services/cast.service';
 })
 export class AdminPageIndividualComponent implements OnInit {
 
-  constructor(public cast: CastService) { }
+  constructor(public cast: CastService, public admin: AdminService) { }
 
   ngOnInit() {
     this.cast.getEmployees();
