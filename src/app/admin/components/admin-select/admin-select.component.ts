@@ -1,10 +1,12 @@
 import { Component, Input } from '@angular/core';
 import { AdminService } from '../../services/admin.service';
+import { adminSelect } from '../../animations/admin-select';
 
 @Component({
   selector: 'admin-select',
   templateUrl: './admin-select.component.html',
-  styleUrls: ['./admin-select.component.css']
+  styleUrls: ['./admin-select.component.css'],
+  animations: [adminSelect]
 })
 export class AdminSelectComponent {
 

@@ -1,23 +1,31 @@
+.container {
+    border: 3px solid rgb(219, 23, 23);
+    border-radius: 1rem;
+}
 .button-container {
     display: flex;
     justify-content: center;
 }
 .toggle-button {
     background-color: inherit;
+    border: 0;
     color: rgb(219, 23, 23);
     cursor: pointer;
     padding: 0.5rem;
-    border: 3px solid rgb(219, 23, 23);
     text-decoration-line: underline;
     font-size: 1rem;
     font-weight: 600;
-    width: 90%;
+    width: 100%;
+}
+.toggle-button:focus {
+    outline: none;
+    box-shadow: none;
 }
 .menu-container {
-    border: 1px solid black;
-    border-radius: 1rem;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
     width: 100%;
@@ -27,5 +35,9 @@
     border: 0;
     padding: 0.5rem;
     cursor: pointer;
-    width: 25%;
+    width: 20%;
+}
+.employee-name:focus {
+    outline: none;
+    box-shadow: none;
 }
