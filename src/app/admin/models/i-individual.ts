@@ -1,13 +1,13 @@
 export interface IIndividual {
-    client: string[][];
+    client: any[];
     dept: string;
     email: string;
     hire: string;
     name: string;
     permission: string;
     photo: string;
-    projects: string[][];
-    skills: string[][];
+    projects: any[];
+    skills: any[];
     super: string;
     team: string;
     title: string;

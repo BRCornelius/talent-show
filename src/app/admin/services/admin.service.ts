@@ -2,13 +2,14 @@ import { Injectable } from '@angular/core';
 import { IEmployee } from 'src/app/cast/models';
 import { HttpClient } from '@angular/common/http';
 import { Subscription } from 'rxjs';
+import { TopicService } from './topic.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AdminService {
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private topic: TopicService) { }
 
   activeEmployee: IEmployee;
   activeTeam: any;
@@ -27,4 +28,15 @@ export class AdminService {
       this.requestResponse = res.body;
       this.inputting = false;
     });
+  getInactiveClients: Function = (employeeClients) => {
+    const results = this.topic.clients.filter(client => {
+      if(client.name === Object.keys(employeeClients[0])[0]) {
+        return false;
+      } else {
+        return true;
+      }
+    })
+    console.log(results)
+    return results;
+  }
 }
