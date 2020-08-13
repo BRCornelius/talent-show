@@ -20,4 +20,5 @@ export class TopicCardComponent implements OnInit {
 
   itemKey: string;
   itemValue: string;
+  value: string;
 }
