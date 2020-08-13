@@ -20,7 +20,7 @@ input {
     color: white;
     padding: 0 0.2rem;
     border: 0;
-    max-width: 2.75rem;
+    max-width: 2.5rem;
 }
 input::placeholder {
     color: white;

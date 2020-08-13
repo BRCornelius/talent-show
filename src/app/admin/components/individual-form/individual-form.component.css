@@ -20,3 +20,7 @@
     justify-content: space-evenly;
     width: 100%;
 }
+.clients-column {
+    display: flex;
+    flex-direction: column;
+}

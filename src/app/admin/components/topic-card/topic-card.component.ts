@@ -23,4 +23,9 @@ export class TopicCardComponent implements OnInit {
   itemValue: string;
   sign: string;
   value: string;
+
+  toggleActive: Function = () => {
+    this.active = !this.active;
+    this.itemValue = "0%";
+  };
 }

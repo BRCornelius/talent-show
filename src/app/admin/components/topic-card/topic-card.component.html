@@ -1,5 +1,5 @@
 <div class="container" id={{active}}>
-  <button id={{active}}>{{sign}}</button>
+  <button id={{active}} (click)="toggleActive()">{{sign}}</button>
   <input *ngIf="active" id="value" name="value" placeholder={{itemValue}}
   required="true" minlength="3" [(ngModel)]="value" (ngModelChange)="value=$event">
   <div class="title-container">
