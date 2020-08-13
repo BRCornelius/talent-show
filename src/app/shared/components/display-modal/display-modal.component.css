@@ -41,12 +41,20 @@ p {
     display: inline-flex;
     justify-content: space-around;
 }
-.skills {
-    text-align: center;
-}
 .container {
     cursor: not-allowed;
     max-height: 30rem;
     padding: 0.5rem 0;
     overflow-y: scroll;
+}
+.graded-list-container {
+    display: flex;
+    flex-direction: column;
+}
+.skills-container {
+    display: flex;
+    justify-content: center;
+}
+shared-graded-list-item {
+    margin: 0.5rem 0;
 }

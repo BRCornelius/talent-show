@@ -1,0 +1,27 @@
+.container {
+    background-color: rgb(219, 23, 23);
+    display: inline-flex;
+    border-bottom-left-radius: 50%;
+    border-top-left-radius: 50%;
+}
+.text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+p {
+    color: white;
+    margin: 0;
+    padding: 0 0.5rem;
+}
+.score {
+    background-color: white;
+    border: 1px solid rgb(219, 23, 23);
+    border-radius: 50%;
+    color: rgb(219, 23, 23);
+    padding: 0.25rem;
+}
+.score:focus {
+    outline: none;
+    box-shadow: none;
+}
