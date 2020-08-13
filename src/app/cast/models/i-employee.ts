@@ -1,7 +1,7 @@
 import { ITimeOff } from './i-time-off';
 
 export interface IEmployee {
-    clients: string[][];
+    client: string[][];
     days: ITimeOff[];
     dept: string;
     email: string;
