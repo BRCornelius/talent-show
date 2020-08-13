@@ -29,16 +29,20 @@ export class AdminService {
       this.inputting = false;
     });
   getInactiveClients: Function = (employeeClients) => {
-    return this.topic.clients.filter(client => {
-      return employeeClients.reduce((agg, curr) => {
-        if(agg === false) {
-          return false
-        } else if(Object.keys(curr)[0] === client.name) {
-          return false
-        } else {
-          return agg;
-        }
-      }, true)
-    })
+    if(this.topic.clients) {
+      return this.topic.clients.filter(client => {
+        return employeeClients.reduce((agg, curr) => {
+          if(agg === false) {
+            return false
+          } else if(Object.keys(curr)[0] === client.name) {
+            return false
+          } else {
+            return agg;
+          }
+        }, true)
+      })
+    } else {
+      return [];
+    }
   }
 }

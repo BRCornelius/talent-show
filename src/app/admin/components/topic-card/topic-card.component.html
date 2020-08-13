@@ -1,6 +1,6 @@
-<div class="container">
-  <button>-</button>
-  <input id="value" name="value" placeholder={{itemValue}}
+<div class="container" id={{active}}>
+  <button id={{active}}>{{sign}}</button>
+  <input *ngIf="active" id="value" name="value" placeholder={{itemValue}}
   required="true" minlength="3" [(ngModel)]="value" (ngModelChange)="value=$event">
   <div class="title-container">
     {{itemKey}}

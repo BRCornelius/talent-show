@@ -24,5 +24,4 @@ export class CastService {
       });
       this.employees = response;
     });
-
 }

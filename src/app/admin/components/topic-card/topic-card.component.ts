@@ -11,8 +11,9 @@ export class TopicCardComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.itemKey = Object.keys(this.item)[0];
+    this.itemKey = this.active ? Object.keys(this.item)[0] : this.item.name;
     this.itemValue = Object.values(this.item)[0].concat("%");
+    this.sign = this.active ? "-" : "+"
   }
 
   @Input() item: IGradedItem = {mmm: "54"};
@@ -20,5 +21,6 @@ export class TopicCardComponent implements OnInit {
 
   itemKey: string;
   itemValue: string;
+  sign: string;
   value: string;
 }

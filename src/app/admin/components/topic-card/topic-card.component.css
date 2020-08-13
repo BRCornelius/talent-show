@@ -4,6 +4,7 @@
     background-color: rgb(219, 23, 23);
     border-bottom-left-radius: 50%;
     border-top-left-radius: 50%;
+    width: 100%;
 }
 
 button {
@@ -11,6 +12,7 @@ button {
     border: 1px solid rgb(219, 23, 23);
     border-radius: 50%;
     color: rgb(219, 23, 23);
+    margin-right: 0.5rem;
 }
 input {
     background-color: inherit;
@@ -25,4 +27,9 @@ input::placeholder {
 }
 .title-container {
     padding-right: 0.25rem;
+}
+#false {
+    background-color: gainsboro;
+    border-color: gainsboro;
+    color: black;
 }
