@@ -1,19 +1,28 @@
 .container {
     display: inline-flex;
-    border: 1px solid black;
-    border-top-left-radius: 90%;
-    border-bottom-left-radius: 90%;
+    color: white;
+    background-color: rgb(219, 23, 23);
+    border-bottom-left-radius: 50%;
+    border-top-left-radius: 50%;
 }
 
-.button {
-    padding: 0.5rem;
+button {
+    background-color: white;
+    border: 1px solid rgb(219, 23, 23);
+    border-radius: 50%;
+    color: rgb(219, 23, 23);
 }
 input {
-    border: 0;
     background-color: inherit;
-    width: 1.5rem;
+    border-radius: 25%;
+    color: white;
+    padding: 0 0.2rem;
+    border: 0;
+    max-width: 2.75rem;
 }
-input:focus {
-    outline: none;
-    box-shadow: none;
+input::placeholder {
+    color: white;
+}
+.title-container {
+    padding-right: 0.25rem;
 }

@@ -35,7 +35,10 @@
     <div class="label-container">
       <p>Clients</p>
     </div>
-    <admin-topic-card *ngFor="let client of admin.activeEmployee.client" [item]="client"></admin-topic-card>
+    <admin-topic-card
+      *ngFor="let client of admin.activeEmployee.client"
+      [item]="client"
+      [active]="true"></admin-topic-card>
   </div>
   <div class="button-container">
     <button (click)="showName()">Submit</button>
