@@ -19,22 +19,16 @@
   <div class="bottom-rows">
     <div class="projects">
       <h2>Projects</h2>
-      <p *ngFor="let project of data.item.projects">
-        {{project[0]}}: {{project[1]}}%
-      </p>
+      <shared-graded-list-item *ngFor="let project of data.item.projects" [gradedItem]="project"></shared-graded-list-item>
     </div>
     <div class="clients">
       <h2>Clients</h2>
-      <p *ngFor="let client of data.item.client">
-        {{client[0]}}: {{client[1]}}%
-      </p>
+      <shared-graded-list-item *ngFor="let client of data.item.client" [gradedItem]="client"></shared-graded-list-item>
     </div>
   </div>
   <div class="skills" *ngIf="data.path === 'cast'">
     <h2>Skills</h2>
-    <p *ngFor="let skill of data.item.skills">
-      {{skill[0]}}: {{skill[1]}}%
-    </p>
+    <shared-graded-list-item *ngFor="let skill of data.item.skills" [gradedItem]="skill"></shared-graded-list-item>
   </div>
   <div class="members" *ngIf="data.path === 'teams'">
     <h2>Team Members</h2>

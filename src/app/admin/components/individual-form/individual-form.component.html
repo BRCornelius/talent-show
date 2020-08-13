@@ -31,6 +31,12 @@
     <input class="text-input" id="title" name="title" placeholder={{admin.activeEmployee.title}}
     required="!edit" minlength="4" [(ngModel)]="title" (ngModelChange)="title=$event">
   </div>
+  <div class="row-container">
+    <div class="label-container">
+      <p>Clients</p>
+    </div>
+    <admin-topic-card *ngFor="let client of admin.activeEmployee.client" [item]="client"></admin-topic-card>
+  </div>
   <div class="button-container">
     <button (click)="showName()">Submit</button>
   </div>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { TeamService } from 'src/app/team/services/team.service';
 import { AdminService } from '../../services/admin.service';
 
@@ -7,12 +7,9 @@ import { AdminService } from '../../services/admin.service';
   templateUrl: './admin-page-team.component.html',
   styleUrls: ['./admin-page-team.component.css']
 })
-export class AdminPageTeamComponent implements OnInit {
+export class AdminPageTeamComponent {
 
-  constructor(public team: TeamService, public admin: AdminService) { }
-
-  ngOnInit() {
+  constructor(public team: TeamService, public admin: AdminService) {
     this.team.getTeams();
   }
-
 }

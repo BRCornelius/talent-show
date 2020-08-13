@@ -8,15 +8,29 @@ import { DisplayModalComponent } from './components/display-modal/display-modal.
 
 import {MatDialogModule} from '@angular/material/dialog';
 import { InterstitialComponent } from './components/interstitial/interstitial.component';
+import { GradedListItemComponent } from './components/graded-list-item/graded-list-item.component';
 
 
 @NgModule({
-  declarations: [DisplayCardComponent, DisplayGridComponent, DisplayInfoComponent, DisplayModalComponent, InterstitialComponent],
+  declarations: [
+    DisplayCardComponent,
+    DisplayGridComponent,
+    DisplayInfoComponent,
+    DisplayModalComponent,
+    InterstitialComponent,
+    GradedListItemComponent
+  ],
   imports: [
     CommonModule,
     MatDialogModule
   ],
-  exports: [DisplayCardComponent, DisplayGridComponent, DisplayInfoComponent, DisplayModalComponent, InterstitialComponent],
+  exports: [
+    DisplayCardComponent,
+    DisplayGridComponent,
+    DisplayInfoComponent,
+    DisplayModalComponent,
+    InterstitialComponent,
+    GradedListItemComponent],
   entryComponents: [DisplayModalComponent],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })

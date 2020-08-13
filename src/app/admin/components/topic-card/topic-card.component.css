@@ -1,0 +1,19 @@
+.container {
+    display: inline-flex;
+    border: 1px solid black;
+    border-top-left-radius: 90%;
+    border-bottom-left-radius: 90%;
+}
+
+.button {
+    padding: 0.5rem;
+}
+input {
+    border: 0;
+    background-color: inherit;
+    width: 1.5rem;
+}
+input:focus {
+    outline: none;
+    box-shadow: none;
+}

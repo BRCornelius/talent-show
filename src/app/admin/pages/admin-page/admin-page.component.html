@@ -7,16 +7,16 @@
       value={{route}}
       (click)="admin.updateAdminRoute($event)">{{route}}</button>
   </div>
-    <admin-page-individual *ngSwitchCase="'Individual'"></admin-page-individual>
-    <admin-page-team *ngSwitchCase="'Team'"></admin-page-team>
-    <div class="default-page" *ngSwitchDefault>
-      <h1>
-        Welcome to the Admin Console
-      </h1>
-    </div>
-    <div *ngIf="!admin.inputting && admin.requestResponse" class="response">
-      <h3>
-        {{admin.requestResponse}}
-      </h3>
-    </div>
+  <admin-page-individual *ngSwitchCase="'Individual'"></admin-page-individual>
+  <admin-page-team *ngSwitchCase="'Team'"></admin-page-team>
+  <div class="default-page" *ngSwitchDefault>
+    <h1>
+      Welcome to the Admin Console
+    </h1>
+  </div>
+  <div *ngIf="!admin.inputting && admin.requestResponse" class="response">
+    <h3>
+      {{admin.requestResponse}}
+    </h3>
+  </div>
 </div>

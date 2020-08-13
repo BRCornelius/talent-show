@@ -11,6 +11,8 @@ import { CastService } from '../cast/services/cast.service';
 import { IndividualFormComponent } from './components/individual-form/individual-form.component';
 import { AdminPageTeamComponent } from './pages/admin-page-team/admin-page-team.component';
 import { TeamFormComponent } from './components/team-form/team-form.component';
+import { TopicCardComponent } from './components/topic-card/topic-card.component';
+import { TopicService } from './services/topic.service';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,8 @@ import { TeamFormComponent } from './components/team-form/team-form.component';
     AdminPageIndividualComponent,
     AdminPageTeamComponent,
     IndividualFormComponent,
-    TeamFormComponent
+    TeamFormComponent,
+    TopicCardComponent
   ],
   imports: [
     CommonModule,
@@ -29,6 +32,6 @@ import { TeamFormComponent } from './components/team-form/team-form.component';
   bootstrap: [AdminPageComponent],
   entryComponents: [AdminPageComponent],
   exports: [AdminPageComponent],
-  providers: [AdminService, CastService]
+  providers: [AdminService, CastService, TopicService]
 })
 export class AdminModule { }

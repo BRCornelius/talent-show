@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { AdminService } from '../../services/admin.service';
+import { TopicService } from '../../services/topic.service';
 
 @Component({
   selector: 'admin-individual-form',
@@ -8,7 +9,10 @@ import { AdminService } from '../../services/admin.service';
 })
 export class IndividualFormComponent implements OnInit {
 
-  constructor(public admin: AdminService) { }
+  constructor(
+    public admin: AdminService,
+    public topic: TopicService
+  ) { }
 
   ngOnInit() {
     this.type = this.edit ? "Edit" : "Add";
