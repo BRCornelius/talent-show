@@ -16,7 +16,6 @@ export class CastService {
     .subscribe((res: any) => {
       const response = [];
       res.data.forEach(item => {
-        console.log(item.client)
         const inactiveClients = this.admin.getInactiveClients(item.client);
         response.push({
           ...item,
@@ -24,7 +23,6 @@ export class CastService {
         })
       });
       this.employees = response;
-      console.log(this.employees)
     });
 
 }
