@@ -11,12 +11,19 @@ export class GradedListItemComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {
-    this.key = Object.keys(this.gradedItem)[0];
-    this.value = Object.values(this.gradedItem)[0];
+    switch(this.type) {
+      case "cast":
+        this.key = Object.keys(this.gradedItem)[0];
+        this.value = Object.values(this.gradedItem)[0].concat("%");
+        break;
+      default:
+        this.key = this.gradedItem;
+        this.value = "§"
+    }
   }
 
-  @Input() gradedItem: IGradedItem;
+  @Input() gradedItem: IGradedItem | string;
   @Input() type: string;
-  key: string;
+  key: string | IGradedItem;
   value: string;
 }
