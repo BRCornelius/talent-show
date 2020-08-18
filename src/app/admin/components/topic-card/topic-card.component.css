@@ -13,6 +13,8 @@ button {
     border-radius: 50%;
     color: rgb(219, 23, 23);
     margin-right: 0.5rem;
+    font-size: 1.5rem;
+    padding: 0 0.5rem;
 }
 input {
     background-color: inherit;
@@ -26,7 +28,10 @@ input::placeholder {
     color: white;
 }
 .title-container {
-    padding-right: 0.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 0.5rem;
 }
 #false {
     background-color: gainsboro;
