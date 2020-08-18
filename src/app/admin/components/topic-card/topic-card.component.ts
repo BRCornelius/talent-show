@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { IGradedItem } from 'src/app/shared/models/i-graded-item';
+import { AdminService } from '../../services/admin.service';
 
 @Component({
   selector: 'admin-topic-card',
@@ -8,7 +9,7 @@ import { IGradedItem } from 'src/app/shared/models/i-graded-item';
 })
 export class TopicCardComponent implements OnInit {
 
-  constructor() { }
+  constructor(private admin: AdminService) { }
 
   ngOnInit() {
     this.itemKey = this.active ? Object.keys(this.item)[0] : this.item.name;
@@ -26,6 +27,7 @@ export class TopicCardComponent implements OnInit {
 
   toggleActive: Function = () => {
     this.active = !this.active;
+    this.admin.updateActiveEmployeeClients(this.itemKey, this.active);
     this.itemValue = "0%";
   };
 }

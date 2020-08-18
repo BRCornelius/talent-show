@@ -45,4 +45,16 @@ export class AdminService {
       return [];
     }
   }
+  updateActiveEmployeeClients: Function = (item, action) => {
+    switch(action) {
+      case false:
+        console.log(`removing ${item}`);
+        break;
+      case true: 
+        console.log(`adding ${item}`)
+        break;
+      default:
+        console.log(`default behavior for action ${action}`)
+    }
+  }
 }
