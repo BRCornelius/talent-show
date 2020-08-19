@@ -16,7 +16,7 @@ export class AdminService {
   activeTeam: any;
   adminRoute: string;
   adminRoutes: string[] = ['Individual', 'Team'];
-  requestResponse: string;
+  requestResponse: string; // TODO Remove when live
   inputting: boolean;
 
   updateActiveEmployeeName: Function = ($event) => this.activeEmployee = JSON.parse($event.target.value);
@@ -26,7 +26,7 @@ export class AdminService {
   sendRequest: Function = (requestObject): Subscription =>
     this.http.post('https://vk55jlt9x8.execute-api.us-east-1.amazonaws.com/beta/test-request', requestObject)
     .subscribe((res: any) => {
-      this.requestResponse = res.body;
+      this.requestResponse = res.body; // TODO Temove when live
       this.inputting = false;
     });
   getInactiveClients: Function = (employeeClients) => {

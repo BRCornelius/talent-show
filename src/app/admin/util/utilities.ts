@@ -60,3 +60,10 @@ export const addElementByKey = (arr, key, active) => {
         default:
     }
 }
+
+export const replaceElement = (arr, elementToAdd) => {
+    const key = Object.keys(elementToAdd)[0];
+    const index = findIndexOfActive(arr, key);
+    arr.splice(index, 1, elementToAdd);
+    return arr;
+}

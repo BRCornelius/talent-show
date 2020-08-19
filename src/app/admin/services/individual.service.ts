@@ -1,31 +1,13 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { AdminService } from '../../services/admin.service';
-import { TopicService } from '../../services/topic.service';
-import { IndividualService } from '../../services/individual.service';
-import { replaceElement } from '../../util/utilities';
+import { Injectable } from '@angular/core';
+import { AdminService } from './admin.service';
 
-@Component({
-  selector: 'admin-individual-form',
-  templateUrl: './individual-form.component.html',
-  styleUrls: ['./individual-form.component.css'],
+@Injectable({
+  providedIn: 'root'
 })
-export class IndividualFormComponent implements OnInit {
+export class IndividualService {
 
-  constructor(
-    public admin: AdminService,
-    public topic: TopicService,
-    public ind: IndividualService
-  ) { }
+  constructor(private admin: AdminService) { }
 
-  ngOnInit() {
-    this.type = this.edit ? "Edit" : "Add";
-  }
-
-  @Input() edit: boolean;
-
-  type: string;
-
-  client: string[][];
   dept: string;
   email: string;
   hire: string;
@@ -38,12 +20,9 @@ export class IndividualFormComponent implements OnInit {
   team: string;
   title: string;
 
-  isFormReady: boolean;
-
-  handleTopicValueChanged: Function = (value) => {
-    replaceElement(this.admin.activeEmployee.client, value);
-    console.log(this.admin.activeEmployee.client);
-  }
+  amexClient: string;
+  usaaClient: string;
+  iSeatz: string;
 
   showName: Function = () => {
     const submission = { name: this.admin.activeEmployee.name }
@@ -62,6 +41,7 @@ export class IndividualFormComponent implements OnInit {
     if(this.title) {
       Object.assign(submission, { title: this.title });
     };
+    Object.assign(submission, { client: this.admin.activeEmployee.client })
     // if(validateIndividualEntry(submission)) {
     //   console.log(this.name)
     //   console.log(this.admin.activeEmployee);

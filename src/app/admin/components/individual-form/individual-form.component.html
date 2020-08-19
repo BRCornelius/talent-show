@@ -8,28 +8,28 @@
       <p>Photo</p>
     </div>
     <input class="text-input" id="photo" name="photo" placeholder={{admin.activeEmployee.photo}}
-    required="!edit" minlength="4" [(ngModel)]="photo" (ngModelChange)="photo=$event">
+    required="!edit" minlength="4" [(ngModel)]="ind.photo" (ngModelChange)="ind.photo=$event">
   </div>
   <div class="row-container">
     <div class="label-container">
       <p>Department</p>
     </div>
     <input class="text-input" id="dept" name="dept" placeholder={{admin.activeEmployee.dept}}
-    required="!edit" minlength="4" [(ngModel)]="dept" (ngModelChange)="dept=$event">
+    required="!edit" minlength="4" [(ngModel)]="ind.dept" (ngModelChange)="ind.dept=$event">
   </div>
   <div class="row-container">
     <div class="label-container">
       <p>Email</p>
     </div>
     <input class="text-input" id="email" name="email" placeholder={{admin.activeEmployee.email}}
-    required="!edit" minlength="4" [(ngModel)]="email" (ngModelChange)="email=$event">
+    required="!edit" minlength="4" [(ngModel)]="ind.email" (ngModelChange)="ind.email=$event">
   </div>
   <div class="row-container">
     <div class="label-container">
       <p>Title</p>
     </div>
     <input class="text-input" id="title" name="title" placeholder={{admin.activeEmployee.title}}
-    required="!edit" minlength="4" [(ngModel)]="title" (ngModelChange)="title=$event">
+    required="!edit" minlength="4" [(ngModel)]="ind.title" (ngModelChange)="ind.title=$event">
   </div>
   <div class="row-container">
     <div class="label-container">
@@ -40,7 +40,8 @@
         <admin-topic-card
           *ngFor="let client of admin.activeEmployee.client"
           [item]="client"
-          [active]="true"></admin-topic-card>
+          [active]="true"
+          (changeValue)="handleTopicValueChanged($event)"></admin-topic-card>
       </div>
       <div class="clients-column" id="clients-inactive">
         <admin-topic-card
@@ -51,6 +52,6 @@
     </div>
   </div>
   <div class="button-container">
-    <button (click)="showName()">Submit</button>
+    <button (click)="ind.showName()">Submit</button>
   </div>
 </div>
