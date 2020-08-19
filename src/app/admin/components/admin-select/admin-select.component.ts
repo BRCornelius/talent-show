@@ -26,5 +26,6 @@ export class AdminSelectComponent {
       default:
         this.admin.updateActiveEmployeeName($event);
     }
+    this.toggled = false;
   }
 }
