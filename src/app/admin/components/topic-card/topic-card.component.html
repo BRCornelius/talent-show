@@ -2,10 +2,10 @@
   <button class="add-subtract" id={{active}} (click)="toggleActive()">{{resolveSign()}}</button>
   <input *ngIf="active" id="value" name="value" placeholder={{itemValue}} class={{itemKey}}
   required="true" minlength="3" [(ngModel)]="value" (ngModelChange)="handleValueChange($event)">
-  <div class="title-container">
-    <div class="title-row">
-      <p>{{itemKey}}</p>
-      <button *ngIf="!isSubmitted" (click)="valueChange()">submit</button>
+  <div class="title-row">
+    <div class="title-container">
+      {{itemKey}}
     </div>
+    <button *ngIf="!isSubmitted" class="submit-change" (click)="valueChange()">submit</button>
   </div>
 </div>
