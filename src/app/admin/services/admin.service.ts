@@ -3,6 +3,7 @@ import { IEmployee } from 'src/app/cast/models';
 import { HttpClient } from '@angular/common/http';
 import { Subscription } from 'rxjs';
 import { TopicService } from './topic.service';
+import { removeElementByKey, addElementByKey } from '../util/utilities';
 
 @Injectable({
   providedIn: 'root'
@@ -48,13 +49,15 @@ export class AdminService {
   updateActiveEmployeeClients: Function = (item, action) => {
     switch(action) {
       case false:
-        console.log(`removing ${item}`);
+        addElementByKey(this.activeEmployee.inactiveClients, item, action);
+        removeElementByKey(this.activeEmployee.client, item, action);
         break;
-      case true: 
-        console.log(`adding ${item}`)
+      case true:
+        addElementByKey(this.activeEmployee.client, item, action);
+        removeElementByKey(this.activeEmployee.inactiveClients, item, action);
         break;
       default:
-        console.log(`default behavior for action ${action}`)
+        console.error(`default behavior for action ${action}`)
     }
   }
 }

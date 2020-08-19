@@ -6,6 +6,7 @@ export interface IEmployee {
     dept: string;
     email: string;
     hire: string;
+    inactiveClients: any;
     name: string;
     permission: string;
     photo: string;

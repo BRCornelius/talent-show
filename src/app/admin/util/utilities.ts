@@ -16,3 +16,47 @@ export const validateIndividualEntry = (i): boolean => {
     // if(i.title.length < 2) { return false };
     return true;
 }
+
+const findIndexOfActive = (arr, key) => arr.reduce((agg, curr, i) => {
+        if(agg){
+        return agg
+        } else if (Object.keys(curr)[0] === key) {
+        return i;
+        }
+    }, undefined)
+
+const findIndexOfInactive = (arr, key) => arr.reduce((agg, curr, i) => {
+    if(agg){
+    return agg
+    } else if (curr.name === key) {
+    return i;
+    }
+}, undefined)
+
+export const removeElementByKey = (arr, key, active) => {
+    let index;
+    switch(active) {
+        case false:
+            index = findIndexOfActive(arr, key);
+            arr.splice(index, 1);
+            return arr;
+        case true:
+            index = findIndexOfInactive(arr, key);
+            arr.splice(index, 1);
+            return arr;
+        default:
+            return arr;
+    }
+}
+
+export const addElementByKey = (arr, key, active) => {
+    switch(active) {
+        case true:
+            arr.push({[key]: "0"});
+            break;
+        case false:
+            arr.push({name: key});
+            break;
+        default:
+    }
+}
