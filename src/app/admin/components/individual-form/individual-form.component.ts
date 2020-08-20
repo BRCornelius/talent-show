@@ -42,7 +42,6 @@ export class IndividualFormComponent implements OnInit {
 
   handleTopicValueChanged: Function = (data) => {
     const { type, value } = data;
-    console.log(type, value)
     switch (type) {
       case 'Clients':
         replaceElement(this.admin.activeEmployee.client, value);
