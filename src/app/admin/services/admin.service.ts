@@ -50,11 +50,9 @@ export class AdminService {
     if(this.topic.skills) {
       return this.topic.skills.filter(skill => {
         return employeeSkills.reduce((agg, curr) => {
-          console.log(Object.keys(curr)[0], skill.name, agg)
           if(agg === false) {
             return false;
           } else if(Object.keys(curr)[0] === skill.name) {
-            // console.log(Object.keys(curr)[0], skill.name)
             return false;
           } else {
             return agg;
