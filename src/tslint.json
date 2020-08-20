@@ -4,13 +4,13 @@
         "directive-selector": [
             true,
             "attribute",
-            "app",
+            ["app", "admin", "cast", "core", "shared", "team"],
             "camelCase"
         ],
         "component-selector": [
             true,
             "element",
-            "app",
+            ["app", "admin", "cast", "core", "shared", "team"],
             "kebab-case"
         ]
     }

@@ -17,13 +17,13 @@ export class IndividualFormComponent implements OnInit {
     public ind: IndividualService
   ) { }
 
-  ngOnInit() {
-    this.type = this.edit ? "Edit" : "Add";
-  }
-
   @Input() edit: boolean;
 
   type: string;
+
+  ngOnInit() {
+    this.type = this.edit ? 'Edit' : 'Add';
+  }
 
   handleTopicValueChanged: Function = (data) => {
     const { type, value } = data;
@@ -32,7 +32,7 @@ export class IndividualFormComponent implements OnInit {
         replaceElement(this.admin.activeEmployee.client, value);
         break;
       case 'Skills':
-        replaceElement(this.admin.activeEmployee.skills, value)
+        replaceElement(this.admin.activeEmployee.skills, value);
         break;
       default:
     }

@@ -3,9 +3,9 @@
     {{type}} {{admin.activeEmployee.name}}
     <small class="subtitle" *ngIf="type === 'Add'">(All fields are required)</small>
   </h1>
-  <admin-input-row [edit]="edit" [title]="'Title'"></admin-input-row>
   <admin-input-row [edit]="edit" [title]="'Photo'"></admin-input-row>
-  <admin-input-row [edit]="edit" [title]="'Department'"></admin-input-row>
+  <admin-input-row [edit]="edit" [title]="'Title'"></admin-input-row>
+  <admin-select-row [title]="'Department'"></admin-select-row>
   <admin-input-row [edit]="edit" [title]="'Email'"></admin-input-row>
   <admin-select-row [title]="'Team'"></admin-select-row>
   <admin-graded-list [title]="'Clients'" (passValue)="handleTopicValueChanged($event)"></admin-graded-list>

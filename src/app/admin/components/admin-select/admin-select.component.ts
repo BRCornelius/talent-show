@@ -15,12 +15,12 @@ export class AdminSelectComponent {
   @Input() items: any[];
   @Input() label: string;
 
-  toggled: boolean = false;
+  toggled = false;
   toggleMenu: Function = () => this.toggled = !this.toggled;
   stringifyItemToPass: Function = (item): any => JSON.stringify(item);
   updateActiveItem: Function = ($event): void => {
-    switch(this.label) {
-      case "Team":
+    switch (this.label) {
+      case 'Team':
         this.admin.updateActiveTeam($event);
         break;
       default:

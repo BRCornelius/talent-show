@@ -11,9 +11,15 @@ export class DisplayCardComponent implements OnInit {
 
   constructor(private dialog: MatDialog) {}
 
+  @Input() item: any;
+  @Input() path: string;
+
+  bottomLeftText: string;
+  bottomRightText: string;
+
   ngOnInit() {
-    switch(this.path) {
-      case "cast":
+    switch (this.path) {
+      case 'cast':
         this.bottomLeftText = this.item.title;
         this.bottomRightText = this.item.team;
         break;
@@ -21,12 +27,6 @@ export class DisplayCardComponent implements OnInit {
         this.bottomLeftText = `Team Lead: ${this.item.super}`;
     }
   }
-
-  @Input() item: any;
-  @Input() path: string;
-
-  bottomLeftText: string;
-  bottomRightText: string;
 
   toggleOpen: Function = (): MatDialogRef<DisplayModalComponent> =>
     this.dialog.open(DisplayModalComponent, {

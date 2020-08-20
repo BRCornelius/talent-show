@@ -10,13 +10,13 @@ export class NavigationLinkComponent implements OnInit {
 
   constructor(public nav: NavigationService) { }
 
-  ngOnInit() {
-    this.active = this.nav.checkActiveNavLink(this.link.label);
-  }
-
   @Input() link: any;
 
   active: boolean;
+
+  ngOnInit() {
+    this.active = this.nav.checkActiveNavLink(this.link.label);
+  }
 
   onClick: Function = () => {
     this.nav.updateActiveNavLink(this.link.label);

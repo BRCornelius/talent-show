@@ -21,27 +21,27 @@ export class IndividualService {
   title: string;
 
   showName: Function = () => {
-    const submission = { name: this.admin.activeEmployee.name }
-    if(this.name) {
+    const submission = { name: this.admin.activeEmployee.name };
+    if (this.name) {
       Object.assign(submission, { name: this.name });
     }
-    if(this.photo) {
+    if (this.photo) {
       Object.assign(submission, { photo: this.photo });
-    };
-    if(this.dept) {
+    }
+    if (this.dept) {
       Object.assign(submission, { dept: this.dept.toLowerCase() });
-    };
-    if(this.email) {
+    }
+    if (this.email) {
       Object.assign(submission, { email: this.email });
-    };
-    if(this.title) {
+    }
+    if (this.title) {
       Object.assign(submission, { title: this.title });
-    };
-    if(this.team) {
+    }
+    if (this.team) {
       Object.assign(submission, { team: this.team });
     }
-    Object.assign(submission, { client: this.admin.activeEmployee.client })
-    Object.assign(submission, { skills: this.admin.activeEmployee.skills })
+    Object.assign(submission, { client: this.admin.activeEmployee.client });
+    Object.assign(submission, { skills: this.admin.activeEmployee.skills });
     // if(validateIndividualEntry(submission)) {
     //   console.log(this.name)
     //   console.log(this.admin.activeEmployee);
@@ -49,5 +49,5 @@ export class IndividualService {
     //   console.error("That is an invalid entry!")
     // };
     this.admin.sendRequest(submission);
-  };
+  }
 }

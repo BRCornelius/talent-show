@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { TeamService } from 'src/app/team/services/team.service';
 import { AdminService } from '../../services/admin.service';
 import { getInactiveTeams } from '../../util/utilities';
@@ -16,7 +16,15 @@ export class SelectRowComponent {
   @Input() title: string;
 
   handleValueSelect: Function = ($event) => {
-    this.ind.team = $event.target.value
-  };
+    switch (this.title) {
+      case 'Team':
+        this.ind.team = $event.target.value;
+        break;
+      case 'Department':
+        this.ind.dept = $event.target.value;
+        break;
+      default:
+    }
+  }
 
 }

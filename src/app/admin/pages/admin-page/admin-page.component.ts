@@ -18,6 +18,7 @@ export class AdminPageComponent {
     this.admin.inputting = true;
     this.topic.getClients();
     this.topic.getSkills();
+    this.topic.getDepartments();
     this.team.getTeams();
   }
 

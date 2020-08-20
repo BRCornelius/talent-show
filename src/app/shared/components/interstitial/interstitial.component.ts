@@ -9,19 +9,19 @@ export class InterstitialComponent implements OnInit {
 
   constructor() { }
 
+  @Input() topic: string;
+
   ngOnInit() {
   }
 
-  @Input() topic: string;
-
   getSource: Function = (): string => {
-    switch(this.topic) {
-      case "carey":
-        return "https://assets.corneliuses.com/photos/common/interstitial-typing.gif"
-      case "lenny":
-        return "https://assets.corneliuses.com/photos/common/interstitial-lenny.gif"
+    switch (this.topic) {
+      case 'carey':
+        return 'https://assets.corneliuses.com/photos/common/interstitial-typing.gif';
+      case 'lenny':
+        return 'https://assets.corneliuses.com/photos/common/interstitial-lenny.gif';
       default:
-        return "https://assets.corneliuses.com/photos/common/interstitial-duncan.gif"
-    };
-  };
+        return 'https://assets.corneliuses.com/photos/common/interstitial-duncan.gif';
+    }
+  }
 }

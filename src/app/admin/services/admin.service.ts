@@ -29,18 +29,21 @@ export class AdminService {
     .subscribe((res: any) => {
       this.requestResponse = res.body; // TODO Temove when live
       this.inputting = false;
-    });
+    })
   getInactiveClients: Function = (employeeClients) => this.topic.clients
     ? setInactiveElements(this.topic.clients, employeeClients)
-    : [];
+    : []
   getInactiveSkills: Function = (employeeSkills) => this.topic.skills
     ? setInactiveElements(this.topic.skills, employeeSkills)
-    : [];
+    : []
   getInactiveTeams: Function = (employeeTeam) => this.team.teams
     ? getInactiveTeams(this.team.teams, employeeTeam)
-    : [];
+    : []
+  getInactiveDepartments: Function = (employeeDepartment) => this.topic.departments
+    ? getInactiveTeams(this.topic.departments, employeeDepartment)
+    : []
   updateActiveEmployeeClients: Function = (item, action) => {
-    switch(action) {
+    switch (action) {
       case false:
         addElementByKey(this.activeEmployee.inactiveClients, item, action);
         removeElementByKey(this.activeEmployee.client, item, action);
@@ -50,11 +53,11 @@ export class AdminService {
         removeElementByKey(this.activeEmployee.inactiveClients, item, action);
         break;
       default:
-        console.error(`default behavior for action ${action}`)
+        console.error(`default behavior for action ${action}`);
     }
   }
   updateActiveEmployeeSkills: Function = (item, action) => {
-    switch(action) {
+    switch (action) {
       case false:
         addElementByKey(this.activeEmployee.inactiveSkills, item, action);
         removeElementByKey(this.activeEmployee.skills, item, action);
@@ -64,7 +67,7 @@ export class AdminService {
         removeElementByKey(this.activeEmployee.inactiveSkills, item, action);
         break;
       default:
-        console.error(`default behavior for action ${action}`)
+        console.error(`default behavior for action ${action}`);
     }
   }
 }

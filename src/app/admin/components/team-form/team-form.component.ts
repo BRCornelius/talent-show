@@ -10,10 +10,6 @@ export class TeamFormComponent implements OnInit {
 
   constructor(public admin: AdminService) { }
 
-  ngOnInit() {
-    this.type = this.edit ? "Edit" : "Add";
-  }
-
   @Input() edit: boolean;
   @Input() label: string;
 
@@ -22,14 +18,18 @@ export class TeamFormComponent implements OnInit {
   name: string;
   photo: string;
 
+  ngOnInit() {
+    this.type = this.edit ? 'Edit' : 'Add';
+  }
+
   showName: Function = () => {
     const submission = { name: this.admin.activeTeam.name };
-    if(this.name) {
+    if (this.name) {
       Object.assign(submission, { name: this.name });
-    };
-    if(this.photo) {
+    }
+    if (this.photo) {
       Object.assign(submission, { photo: this.photo });
-    };
+    }
     // if(validateIndividualEntry(submission)) {
     //   console.log(this.name)
     //   console.log(this.admin.activeEmployee);
@@ -37,5 +37,5 @@ export class TeamFormComponent implements OnInit {
     //   console.error("That is an invalid entry!")
     // };
     this.admin.sendRequest(submission);
-  };
+  }
 }

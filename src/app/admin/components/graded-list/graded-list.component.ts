@@ -10,8 +10,14 @@ export class GradedListComponent implements OnInit {
 
   constructor(public admin: AdminService) { }
 
+  @Input() title: string;
+  @Output() passValue: EventEmitter<any> = new EventEmitter();
+
+  counterTopic: any[];
+  topic: any[];
+
   ngOnInit() {
-    switch(this.title) {
+    switch (this.title) {
       case 'Clients':
         this.topic = this.admin.activeEmployee.client;
         this.counterTopic = this.admin.activeEmployee.inactiveClients;
@@ -24,12 +30,6 @@ export class GradedListComponent implements OnInit {
         this.topic = [];
     }
   }
-
-  @Input() title: string;
-  @Output() passValue: EventEmitter<any> = new EventEmitter();
-
-  counterTopic: any[];
-  topic: any[];
 
   handleTopicValueChanged: Function = (value) => {
     this.passValue.emit({value, type: this.title});

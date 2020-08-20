@@ -1,3 +1,3 @@
 export interface IGradedItem {
-    [key:string]: string;
+    [key: string]: string;
 }
