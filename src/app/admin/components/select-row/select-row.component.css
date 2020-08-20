@@ -12,3 +12,6 @@
 select {
     width: 100%;
 }
+select:focus {
+    border-color: rgb(219, 23, 23);
+}

@@ -3,7 +3,13 @@
     <button
       class="toggle-button"
       (click)="toggleMenu()"
-      [@toggleAdmin]="toggled ? 'open' : 'closed'">Select {{label}}</button>
+      [@toggleAdmin]="toggled ? 'open' : 'closed'">
+      <div class="button-label">
+        Select {{label}}
+        <object *ngIf="!toggled" data="../../../../assets/down-arrow.svg" width="15"></object>
+        <object *ngIf="toggled" data="../../../../assets/up-arrow.svg" width="15"></object>
+      </div>
+      </button>
   </div>
   <div class="menu-container" *ngIf="toggled">
     <button
