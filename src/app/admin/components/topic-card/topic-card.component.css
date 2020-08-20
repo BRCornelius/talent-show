@@ -2,9 +2,10 @@
     display: inline-flex;
     color: white;
     background-color: rgb(219, 23, 23);
-    border-bottom-left-radius: 50%;
-    border-top-left-radius: 50%;
+    border-bottom-left-radius: 40%;
+    border-top-left-radius: 40%;
     width: 100%;
+    border: 1px solid white;
 }
 
 .add-subtract {
