@@ -37,6 +37,9 @@ export class IndividualService {
     if(this.title) {
       Object.assign(submission, { title: this.title });
     };
+    if(this.team) {
+      Object.assign(submission, { team: this.team });
+    }
     Object.assign(submission, { client: this.admin.activeEmployee.client })
     Object.assign(submission, { skills: this.admin.activeEmployee.skills })
     // if(validateIndividualEntry(submission)) {

@@ -3,7 +3,7 @@
     <p>{{title}}</p>
   </div>
   <div class="select-container">
-    <select>
+    <select (change)="handleValueSelect($event)">
       <option value={{admin.activeEmployee.team}} selected>{{admin.activeEmployee.team}}</option>
       <option *ngFor="let team of admin.activeEmployee.inactiveTeams" value={{team.name}}>{{team.name}}</option>
     </select>
