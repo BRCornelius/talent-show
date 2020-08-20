@@ -1,3 +1,22 @@
-<p>
-  graded-list works!
-</p>
+<div class="row-container">
+  <div class="label-container">
+    <p>{{title}}</p>
+  </div>
+  <div class="clients-row">
+    <div class="clients-column" id="clients-active">
+      <admin-topic-card
+        *ngFor="let client of topic"
+        [item]="client"
+        [type]="'client'"
+        [active]="true"
+        (changeValue)="handleTopicValueChanged($event)"></admin-topic-card>
+    </div>
+    <div class="clients-column" id="clients-inactive">
+      <admin-topic-card
+        *ngFor="let client of counterTopic"
+        [item]="client"
+        [type]="'client'"
+        [active]="false"></admin-topic-card>
+    </div>
+  </div>
+</div>

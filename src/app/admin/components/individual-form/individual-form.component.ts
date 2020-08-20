@@ -40,13 +40,14 @@ export class IndividualFormComponent implements OnInit {
 
   isFormReady: boolean;
 
-  handleTopicValueChanged: Function = (value, topic) => {
-    console.log(topic)
-    switch (topic) {
-      case 'client':
+  handleTopicValueChanged: Function = (data) => {
+    const { type, value } = data;
+    console.log(type, value)
+    switch (type) {
+      case 'Clients':
         replaceElement(this.admin.activeEmployee.client, value);
         break;
-      case 'skill':
+      case 'Skills':
         replaceElement(this.admin.activeEmployee.skills, value)
         break;
       default:

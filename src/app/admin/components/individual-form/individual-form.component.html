@@ -31,72 +31,8 @@
     <input class="text-input" id="title" name="title" placeholder={{admin.activeEmployee.title}}
     required="!edit" minlength="4" [(ngModel)]="ind.title" (ngModelChange)="ind.title=$event">
   </div>
-  <div class="row-container">
-    <div class="label-container">
-      <p>Clients</p>
-    </div>
-    <div class="clients-row">
-      <div class="clients-column" id="clients-active">
-        <admin-topic-card
-          *ngFor="let client of admin.activeEmployee.client"
-          [item]="client"
-          [topic]="'client'"
-          [active]="true"
-          (changeValue)="handleTopicValueChanged($event, 'client')"></admin-topic-card>
-      </div>
-      <div class="clients-column" id="clients-inactive">
-        <admin-topic-card
-          *ngFor="let client of admin.activeEmployee.inactiveClients"
-          [item]="client"
-          [topic]="'client'"
-          [active]="false"></admin-topic-card>
-      </div>
-    </div>
-  </div>
-  <div class="row-container">
-    <div class="label-container">
-      <p>Skills</p>
-    </div>
-    <div class="clients-row">
-      <div class="clients-column" id="clients-active">
-        <admin-topic-card
-          *ngFor="let skill of admin.activeEmployee.skills"
-          [item]="skill"
-          [topic]="'skill'"
-          [active]="true"
-          (changeValue)="handleTopicValueChanged($event, 'skill')"></admin-topic-card>
-      </div>
-      <div class="clients-column" id="clients-inactive">
-        <admin-topic-card
-          *ngFor="let skill of admin.activeEmployee.inactiveSkills"
-          [item]="skill"
-          [topic]="'skill'"
-          [active]="false"></admin-topic-card>
-      </div>
-    </div>
-  </div>
-  <div class="row-container">
-    <div class="label-container">
-      <p>Projects</p>
-    </div>
-    <div class="clients-row">
-      <div class="clients-column" id="clients-active">
-        <admin-topic-card
-          *ngFor="let skill of admin.activeEmployee.skills"
-          [item]="skill"
-          [topic]="'skill'"
-          [active]="true"
-          (changeValue)="handleTopicValueChanged($event, 'skill')"></admin-topic-card>
-      </div>
-      <div class="clients-column" id="clients-inactive">
-        <admin-topic-card
-          *ngFor="let skill of admin.activeEmployee.inactiveSkills"
-          [item]="skill"
-          [topic]="'skill'"
-          [active]="false"></admin-topic-card>
-      </div>
-    </div>
-  </div>
+  <admin-graded-list [title]="'Clients'" (passValue)="handleTopicValueChanged($event)"></admin-graded-list>
+  <admin-graded-list [title]="'Skills'" (passValue)="handleTopicValueChanged($event)"></admin-graded-list>
   <div class="button-container">
     <button (click)="ind.showName()">Submit</button>
   </div>

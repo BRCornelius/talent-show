@@ -1,0 +1,17 @@
+.row-container {
+    display: inline-flex;
+    padding: 0.5rem 0;
+    width: 100%;
+}
+.label-container {
+    width: 30%;
+}
+.clients-row {
+    display: inline-flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+.clients-column {
+    display: flex;
+    flex-direction: column;
+}

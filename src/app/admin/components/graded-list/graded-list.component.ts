@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { AdminService } from '../../services/admin.service';
 
 @Component({
   selector: 'admin-graded-list',
@@ -7,9 +8,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GradedListComponent implements OnInit {
 
-  constructor() { }
+  constructor(public admin: AdminService) { }
 
   ngOnInit() {
+    switch(this.title) {
+      case 'Clients':
+        this.topic = this.admin.activeEmployee.client;
+        this.counterTopic = this.admin.activeEmployee.inactiveClients;
+        break;
+      case 'Skills':
+        this.topic = this.admin.activeEmployee.skills;
+        this.counterTopic = this.admin.activeEmployee.inactiveSkills;
+        break;
+      default:
+        this.topic = [];
+    }
+  }
+
+  @Input() title: string;
+  @Output() passValue: EventEmitter<any> = new EventEmitter();
+
+  counterTopic: any[];
+  topic: any[];
+
+  handleTopicValueChanged: Function = (value) => {
+    this.passValue.emit({value, type: this.title});
   }
 
 }
