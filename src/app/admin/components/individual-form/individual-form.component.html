@@ -3,34 +3,10 @@
     {{type}} {{admin.activeEmployee.name}}
     <small class="subtitle" *ngIf="type === 'Add'">(All fields are required)</small>
   </h1>
-  <div class="row-container">
-    <div class="label-container">
-      <p>Photo</p>
-    </div>
-    <input class="text-input" id="photo" name="photo" placeholder={{admin.activeEmployee.photo}}
-    required="!edit" minlength="4" [(ngModel)]="ind.photo" (ngModelChange)="ind.photo=$event">
-  </div>
-  <div class="row-container">
-    <div class="label-container">
-      <p>Department</p>
-    </div>
-    <input class="text-input" id="dept" name="dept" placeholder={{admin.activeEmployee.dept}}
-    required="!edit" minlength="4" [(ngModel)]="ind.dept" (ngModelChange)="ind.dept=$event">
-  </div>
-  <div class="row-container">
-    <div class="label-container">
-      <p>Email</p>
-    </div>
-    <input class="text-input" id="email" name="email" placeholder={{admin.activeEmployee.email}}
-    required="!edit" minlength="4" [(ngModel)]="ind.email" (ngModelChange)="ind.email=$event">
-  </div>
-  <div class="row-container">
-    <div class="label-container">
-      <p>Title</p>
-    </div>
-    <input class="text-input" id="title" name="title" placeholder={{admin.activeEmployee.title}}
-    required="!edit" minlength="4" [(ngModel)]="ind.title" (ngModelChange)="ind.title=$event">
-  </div>
+  <admin-input-row [edit]="edit" [title]="'Title'"></admin-input-row>
+  <admin-input-row [edit]="edit" [title]="'Photo'"></admin-input-row>
+  <admin-input-row [edit]="edit" [title]="'Department'"></admin-input-row>
+  <admin-input-row [edit]="edit" [title]="'Email'"></admin-input-row>
   <admin-graded-list [title]="'Clients'" (passValue)="handleTopicValueChanged($event)"></admin-graded-list>
   <admin-graded-list [title]="'Skills'" (passValue)="handleTopicValueChanged($event)"></admin-graded-list>
   <div class="button-container">

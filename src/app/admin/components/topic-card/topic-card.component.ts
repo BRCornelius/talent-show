@@ -40,7 +40,6 @@ export class TopicCardComponent implements OnInit {
 
   toggleActive: Function = () => {
     this.active = !this.active;
-    console.log(this.type)
     switch(this.type) {
       case 'skill':
         this.admin.updateActiveEmployeeSkills(this.itemKey, this.active);

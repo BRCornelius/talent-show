@@ -1,0 +1,23 @@
+<div class="row-container">
+  <div class="label-container">
+    <p>{{title}}</p>
+  </div>
+  <div class="text-input" [ngSwitch]="title">
+    <input class="text-input" id={{title}} *ngSwitchCase="'Title'"
+      placeholder={{admin.activeEmployee.title}} required="!edit"
+      name="title" minlength="4" [(ngModel)]="ind.title"
+      (ngModelChange)="ind.title=$event">
+    <input class="text-input" id={{title}} *ngSwitchCase="'Photo'"
+      placeholder={{admin.activeEmployee.photo}} required="!edit"
+      name="title" minlength="4" [(ngModel)]="ind.photo"
+      (ngModelChange)="ind.photo=$event">
+    <input class="text-input" id={{title}} *ngSwitchCase="'Department'"
+      placeholder={{admin.activeEmployee.dept}} required="!edit"
+      name="title" minlength="4" [(ngModel)]="ind.dept"
+      (ngModelChange)="ind.dept=$event">
+    <input class="text-input" id={{title}} *ngSwitchCase="'Email'"
+      placeholder={{admin.activeEmployee.email}} required="!edit"
+      name="title" minlength="4" [(ngModel)]="ind.email"
+      (ngModelChange)="ind.email=$event">
+  </div>
+</div>

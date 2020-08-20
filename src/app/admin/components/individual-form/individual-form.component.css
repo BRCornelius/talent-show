@@ -1,26 +1,6 @@
-.row-container {
-    display: inline-flex;
-    padding: 0.5rem 0;
-    width: 100%;
-}
 .button-container {
     padding-top: 1rem;
 }
-.text-input {
-    width: 100%
-}
-.label-container {
-    width: 30%;
-}
 .container {
     padding: 1rem;
-}
-.clients-row {
-    display: inline-flex;
-    justify-content: space-evenly;
-    width: 100%;
-}
-.clients-column {
-    display: flex;
-    flex-direction: column;
 }
