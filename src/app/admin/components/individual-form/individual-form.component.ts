@@ -25,21 +25,6 @@ export class IndividualFormComponent implements OnInit {
 
   type: string;
 
-  client: string[][];
-  dept: string;
-  email: string;
-  hire: string;
-  name: string;
-  permission: string;
-  photo: string;
-  projects: string[][];
-  skills: string[][];
-  super: string;
-  team: string;
-  title: string;
-
-  isFormReady: boolean;
-
   handleTopicValueChanged: Function = (data) => {
     const { type, value } = data;
     switch (type) {
