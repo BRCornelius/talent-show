@@ -39,7 +39,7 @@ input::placeholder {
 }
 #false {
     background-color: gainsboro;
-    border-color: gainsboro;
+    border-color: white;
     color: black;
 }
 .submit-change {
