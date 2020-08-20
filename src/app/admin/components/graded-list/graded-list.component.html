@@ -7,7 +7,7 @@
       <admin-topic-card
         *ngFor="let client of topic"
         [item]="client"
-        [type]="'client'"
+        [type]="title"
         [active]="true"
         (changeValue)="handleTopicValueChanged($event)"></admin-topic-card>
     </div>
@@ -15,7 +15,7 @@
       <admin-topic-card
         *ngFor="let client of counterTopic"
         [item]="client"
-        [type]="'client'"
+        [type]="title"
         [active]="false"></admin-topic-card>
     </div>
   </div>
