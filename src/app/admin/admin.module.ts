@@ -13,6 +13,7 @@ import { AdminPageTeamComponent } from './pages/admin-page-team/admin-page-team.
 import { TeamFormComponent } from './components/team-form/team-form.component';
 import { TopicCardComponent } from './components/topic-card/topic-card.component';
 import { TopicService } from './services/topic.service';
+import { GradedListComponent } from './components/graded-list/graded-list.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { TopicService } from './services/topic.service';
     AdminPageTeamComponent,
     IndividualFormComponent,
     TeamFormComponent,
-    TopicCardComponent
+    TopicCardComponent,
+    GradedListComponent
   ],
   imports: [
     CommonModule,

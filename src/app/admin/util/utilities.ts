@@ -67,3 +67,16 @@ export const replaceElement = (arr, elementToAdd) => {
     arr.splice(index, 1, elementToAdd);
     return arr;
 }
+
+export const setInactiveElements: Function = (allSkills, activeSkills) => {
+    return allSkills.filter(skill => activeSkills.reduce((agg, curr) => {
+          if(agg === false) {
+            return false;
+          } else if(Object.keys(curr)[0] === skill.name) {
+            return false;
+          } else {
+            return agg;
+          }
+        }, true)
+    )
+}

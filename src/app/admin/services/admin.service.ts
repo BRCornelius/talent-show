@@ -3,7 +3,7 @@ import { IEmployee } from 'src/app/cast/models';
 import { HttpClient } from '@angular/common/http';
 import { Subscription } from 'rxjs';
 import { TopicService } from './topic.service';
-import { removeElementByKey, addElementByKey } from '../util/utilities';
+import { removeElementByKey, addElementByKey, setInactiveElements } from '../util/utilities';
 
 @Injectable({
   providedIn: 'root'
@@ -29,40 +29,12 @@ export class AdminService {
       this.requestResponse = res.body; // TODO Temove when live
       this.inputting = false;
     });
-  getInactiveClients: Function = (employeeClients) => {
-    if(this.topic.clients) {
-      return this.topic.clients.filter(client => {
-        return employeeClients.reduce((agg, curr) => {
-          if(agg === false) {
-            return false
-          } else if(Object.keys(curr)[0] === client.name) {
-            return false
-          } else {
-            return agg;
-          }
-        }, true)
-      })
-    } else {
-      return [];
-    }
-  };
-  getInactiveSkills: Function = (employeeSkills) => {
-    if(this.topic.skills) {
-      return this.topic.skills.filter(skill => {
-        return employeeSkills.reduce((agg, curr) => {
-          if(agg === false) {
-            return false;
-          } else if(Object.keys(curr)[0] === skill.name) {
-            return false;
-          } else {
-            return agg;
-          }
-        }, true)
-      })
-    } else {
-      return [];
-    }
-  };
+  getInactiveClients: Function = (employeeClients) => this.topic.clients
+    ? setInactiveElements(this.topic.clients, employeeClients)
+    : [];
+  getInactiveSkills: Function = (employeeSkills) => this.topic.skills
+    ? setInactiveElements(this.topic.skills, employeeSkills)
+    : [];
   updateActiveEmployeeClients: Function = (item, action) => {
     switch(action) {
       case false:
