@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Subscription } from 'rxjs';
 import { AdminService } from 'src/app/admin/services/admin.service';
+import { addInactiveElements } from '../util/utilities';
 
 @Injectable({
   providedIn: 'root'
@@ -15,13 +16,9 @@ export class CastService {
   getEmployees: Function = (): Subscription => this.http.get('https://vk55jlt9x8.execute-api.us-east-1.amazonaws.com/beta/get-employees')
     .subscribe((res: any) => {
       const response = [];
-      res.data.forEach(item => {
-        const inactiveClients = this.admin.getInactiveClients(item.client);
-        response.push({
-          ...item,
-          inactiveClients
-        })
-      });
+      console.log(response)
+      addInactiveElements(res.data, response, this.admin.getInactiveClients, this.admin.getInactiveSkills);
+      console.log(response)
       this.employees = response;
     });
 }

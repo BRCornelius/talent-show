@@ -17,6 +17,7 @@ export class TopicCardComponent implements OnInit {
   }
 
   @Input() item: IGradedItem = {mmm: "54"};
+  @Input() topic: string;
   @Input() active: boolean;
   @Output() changeValue: EventEmitter<any> = new EventEmitter<any>();
 
@@ -32,7 +33,6 @@ export class TopicCardComponent implements OnInit {
     this.value = $event;
   }
 
-
   valueChange: Function = () => {
     this.isSubmitted = true;
     this.changeValue.emit({[this.itemKey]: this.value})
@@ -40,7 +40,16 @@ export class TopicCardComponent implements OnInit {
 
   toggleActive: Function = () => {
     this.active = !this.active;
-    this.admin.updateActiveEmployeeClients(this.itemKey, this.active);
+    console.log(this.topic)
+    switch(this.topic) {
+      case 'skill':
+        this.admin.updateActiveEmployeeSkills(this.itemKey, this.active);
+        break;
+      case 'client':
+        this.admin.updateActiveEmployeeClients(this.itemKey, this.active);
+        break;
+      default:
+    }
     this.itemValue = "0";
   };
 }

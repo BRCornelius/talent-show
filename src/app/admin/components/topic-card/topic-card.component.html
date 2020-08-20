@@ -1,6 +1,6 @@
 <div class="container" id={{active}}>
   <button class="add-subtract" id={{active}} (click)="toggleActive()">{{resolveSign()}}</button>
-  <input *ngIf="active" id="value" name="value" placeholder={{itemValue}} class={{itemKey}}
+  <input *ngIf="active" id={{itemKey}} name="value" placeholder={{itemValue}} class={{itemKey}}
   required="true" minlength="3" [(ngModel)]="value" (ngModelChange)="handleValueChange($event)">
   <div class="title-row">
     <div class="title-container">

@@ -14,6 +14,7 @@ export class CastPageComponent implements OnInit {
   ngOnInit() {
     this.cast.getEmployees();
     this.topic.getClients();
+    this.topic.getSkills();
   }
 
 }

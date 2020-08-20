@@ -15,6 +15,7 @@ export class AdminPageComponent {
   ) {
     this.admin.inputting = true;
     this.topic.getClients();
+    this.topic.getSkills();
   }
 
 }

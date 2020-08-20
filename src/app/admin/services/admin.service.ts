@@ -45,7 +45,22 @@ export class AdminService {
     } else {
       return [];
     }
-  }
+  };
+  getInactiveSkills: Function = (employeeSkills) => {
+    if(this.topic.skills) {
+      return this.topic.skills.filter(skill => {
+        return employeeSkills.reduce((agg, curr) => {
+          if(agg === false) {
+            return false;
+          } else if(Object.keys(curr)[0] === skill.name) {
+            return false;
+          } else {
+            return agg;
+          }
+        })
+      })
+    }
+  };
   updateActiveEmployeeClients: Function = (item, action) => {
     switch(action) {
       case false:
@@ -55,6 +70,20 @@ export class AdminService {
       case true:
         addElementByKey(this.activeEmployee.client, item, action);
         removeElementByKey(this.activeEmployee.inactiveClients, item, action);
+        break;
+      default:
+        console.error(`default behavior for action ${action}`)
+    }
+  }
+  updateActiveEmployeeSkills: Function = (item, action) => {
+    switch(action) {
+      case false:
+        addElementByKey(this.activeEmployee.inactiveSkills, item, action);
+        removeElementByKey(this.activeEmployee.skills, item, action);
+        break;
+      case true:
+        addElementByKey(this.activeEmployee.skills, item, action);
+        removeElementByKey(this.activeEmployee.inactiveSkills, item, action);
         break;
       default:
         console.error(`default behavior for action ${action}`)

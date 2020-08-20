@@ -40,16 +40,21 @@ export class IndividualFormComponent implements OnInit {
 
   isFormReady: boolean;
 
-  handleTopicValueChanged: Function = (value) => {
-    replaceElement(this.admin.activeEmployee.client, value);
-    console.log(this.admin.activeEmployee.client);
+  handleTopicValueChanged: Function = (value, topic) => {
+    console.log(topic)
+    switch (topic) {
+      case 'client':
+        replaceElement(this.admin.activeEmployee.client, value);
+        break;
+      case 'skill':
+        replaceElement(this.admin.activeEmployee.skills, value)
+        break;
+      default:
+    }
   }
 
   showName: Function = () => {
     const submission = { name: this.admin.activeEmployee.name }
-    if(this.name) {
-      Object.assign(submission, { name: this.name });
-    }
     if(this.photo) {
       Object.assign(submission, { photo: this.photo });
     };

@@ -20,10 +20,6 @@ export class IndividualService {
   team: string;
   title: string;
 
-  amexClient: string;
-  usaaClient: string;
-  iSeatz: string;
-
   showName: Function = () => {
     const submission = { name: this.admin.activeEmployee.name }
     if(this.name) {
@@ -42,6 +38,7 @@ export class IndividualService {
       Object.assign(submission, { title: this.title });
     };
     Object.assign(submission, { client: this.admin.activeEmployee.client })
+    Object.assign(submission, { skills: this.admin.activeEmployee.skills })
     // if(validateIndividualEntry(submission)) {
     //   console.log(this.name)
     //   console.log(this.admin.activeEmployee);
