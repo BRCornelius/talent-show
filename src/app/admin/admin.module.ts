@@ -28,7 +28,7 @@ import { SelectRowComponent } from './components/select-row/select-row.component
     TopicCardComponent,
     GradedListComponent,
     InputRowComponent,
-    SelectRowComponent
+    SelectRowComponent,
   ],
   imports: [
     CommonModule,

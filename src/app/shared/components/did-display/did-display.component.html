@@ -1,0 +1,26 @@
+<div class="title-container">
+  <h1>Days in Development</h1>
+</div>
+<div class="container">
+  <div class="picker-container">
+    <mat-form-field class="form" appearance="fill">
+      <input matInput [matDatepicker]="start" (dateChange)="handleStartDateChange($event)" placeholder="Start Date">
+      <mat-datepicker-toggle matSuffix [for]="start">
+        <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+      </mat-datepicker-toggle>
+      <mat-datepicker #start></mat-datepicker>
+    </mat-form-field>
+  </div>
+  <div class="picker-container">
+    <mat-form-field class="form" appearance="fill">
+      <input matInput [matDatepicker]="end" (dateChange)="handleEndDateChange($event)" placeholder="End Date">
+      <mat-datepicker-toggle matSuffix [for]="end">
+        <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+      </mat-datepicker-toggle>
+      <mat-datepicker #end></mat-datepicker>
+    </mat-form-field>
+  </div>
+  <div class="picker-container button-container">
+    <button>Submit</button>
+  </div>
+</div>

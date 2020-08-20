@@ -9,10 +9,14 @@ import { DisplayModalComponent } from './components/display-modal/display-modal.
 import {MatDialogModule} from '@angular/material/dialog';
 import { InterstitialComponent } from './components/interstitial/interstitial.component';
 import { GradedListItemComponent } from './components/graded-list-item/graded-list-item.component';
-
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { DidDisplayComponent } from './components/did-display/did-display.component';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
+    DidDisplayComponent,
     DisplayCardComponent,
     DisplayGridComponent,
     DisplayInfoComponent,
@@ -22,9 +26,13 @@ import { GradedListItemComponent } from './components/graded-list-item/graded-li
   ],
   imports: [
     CommonModule,
-    MatDialogModule
+    MatDialogModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatIconModule
   ],
   exports: [
+    DidDisplayComponent,
     DisplayCardComponent,
     DisplayGridComponent,
     DisplayInfoComponent,

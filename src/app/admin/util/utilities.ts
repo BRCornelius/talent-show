@@ -87,4 +87,3 @@ export const getInactiveTeams: Function = (allTeams: any[], activeTeam: string) 
         }
         return agg;
     }, []);
-
