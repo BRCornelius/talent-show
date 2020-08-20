@@ -16,7 +16,7 @@ export class CastService {
   getEmployees: Function = (): Subscription => this.http.get('https://vk55jlt9x8.execute-api.us-east-1.amazonaws.com/beta/get-employees')
     .subscribe((res: any) => {
       const response = [];
-      addInactiveElements(res.data, response, this.admin.getInactiveClients, this.admin.getInactiveSkills);
+      addInactiveElements(res.data, response, this.admin.getInactiveClients, this.admin.getInactiveSkills, this.admin.getInactiveTeams);
       this.employees = response;
     });
 }

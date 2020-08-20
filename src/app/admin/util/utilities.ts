@@ -80,3 +80,11 @@ export const setInactiveElements: Function = (allSkills, activeSkills) => {
         }, true)
     )
 }
+
+export const getInactiveTeams: Function = (allTeams: any[], activeTeam: string) => allTeams.reduce((agg, curr) => {
+        if(curr.name !== activeTeam) {
+            agg.push({name: curr.name});
+        }
+        return agg;
+    }, []);
+

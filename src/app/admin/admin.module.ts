@@ -15,6 +15,7 @@ import { TopicCardComponent } from './components/topic-card/topic-card.component
 import { TopicService } from './services/topic.service';
 import { GradedListComponent } from './components/graded-list/graded-list.component';
 import { InputRowComponent } from './components/input-row/input-row.component';
+import { SelectRowComponent } from './components/select-row/select-row.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { InputRowComponent } from './components/input-row/input-row.component';
     TeamFormComponent,
     TopicCardComponent,
     GradedListComponent,
-    InputRowComponent
+    InputRowComponent,
+    SelectRowComponent
   ],
   imports: [
     CommonModule,

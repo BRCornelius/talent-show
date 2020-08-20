@@ -1,0 +1,14 @@
+.label-container {
+    width: 30%;
+}
+.row-container {
+    display: inline-flex;
+    padding: 0.5rem 0;
+    width: 100%;
+}
+.select-container {
+    width: 100%;
+}
+select {
+    width: 100%;
+}

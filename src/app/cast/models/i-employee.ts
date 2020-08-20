@@ -8,6 +8,7 @@ export interface IEmployee {
     hire: string;
     inactiveClients: any;
     inactiveSkills: any;
+    inactiveTeams: any;
     name: string;
     permission: string;
     photo: string;
