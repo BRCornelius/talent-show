@@ -36,5 +36,5 @@
     <h2>Team Members</h2>
     <p *ngFor="let member of data.item.members">{{member.name}}</p>
   </div>
-  <shared-did-display></shared-did-display>
+  <shared-did-display [daysOff]="data.item.days"></shared-did-display>
 </div>

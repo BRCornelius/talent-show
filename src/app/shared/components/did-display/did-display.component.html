@@ -1,5 +1,5 @@
 <div class="title-container">
-  <h1>Days in Development</h1>
+  <h1>Days in Development <small *ngIf="date.developmentDays">: {{date.developmentDays}}</small></h1>
 </div>
 <div class="container">
   <div class="picker-container">
@@ -21,6 +21,6 @@
     </mat-form-field>
   </div>
   <div class="picker-container button-container">
-    <button>Submit</button>
+    <button (click)="mockSubmit()">Submit</button>
   </div>
 </div>
