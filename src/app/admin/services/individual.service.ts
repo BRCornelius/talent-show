@@ -42,12 +42,6 @@ export class IndividualService {
     }
     Object.assign(submission, { client: this.admin.activeEmployee.client });
     Object.assign(submission, { skills: this.admin.activeEmployee.skills });
-    // if(validateIndividualEntry(submission)) {
-    //   console.log(this.name)
-    //   console.log(this.admin.activeEmployee);
-    // } else {
-    //   console.error("That is an invalid entry!")
-    // };
     this.admin.sendRequest(submission);
   }
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { DateService } from '../../services/date.service';
 
 @Component({
@@ -8,9 +8,11 @@ import { DateService } from '../../services/date.service';
 })
 export class DidDisplayComponent {
 
-  constructor(public date: DateService) { }
+  constructor(public date: DateService) {}
 
   @Input() daysOff: any[];
+  @Input() type: string;
+  @Input() teamMemberCount: number;
 
   handleStartDateChange: Function = ($event) => {
     this.date.startDate = $event.value;
@@ -21,7 +23,7 @@ export class DidDisplayComponent {
   }
 
   mockSubmit: Function = () => {
-    this.date.showDates(this.daysOff);
+    this.date.showDates(this.daysOff, this.type, this.teamMemberCount);
   }
 
 }
