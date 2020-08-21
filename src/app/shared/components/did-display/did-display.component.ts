@@ -8,7 +8,7 @@ import { DateService } from '../../services/date.service';
 })
 export class DidDisplayComponent {
 
-  constructor(private date: DateService) { }
+  constructor(public date: DateService) { }
 
   @Input() daysOff: any[];
 
