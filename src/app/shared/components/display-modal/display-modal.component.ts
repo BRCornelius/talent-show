@@ -14,8 +14,11 @@ export class DisplayModalComponent implements OnInit {
     @Inject(MAT_DIALOG_DATA) public data: any
   ) {}
 
+  daysOffArray: any[];
+  teamMemberCount: number;
+
   ngOnInit() {
-    switch(this.data.path) {
+    switch (this.data.path) {
       case 'cast':
         this.daysOffArray = this.data.days;
         this.teamMemberCount = 0;
@@ -28,8 +31,5 @@ export class DisplayModalComponent implements OnInit {
       default:
     }
   }
-
-  daysOffArray: any[];
-  teamMemberCount: number;
 
 }

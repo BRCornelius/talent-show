@@ -1,5 +1,5 @@
 export const countElements: Function = (array: any[], element: any): number => array.reduce((agg, curr) => {
-  if(curr === element) {
+  if (curr === element) {
     agg += 1;
   }
   return agg;
@@ -34,9 +34,14 @@ export const aggregateTeamDaysOff: Function = (teamMembers: any[]) => {
     aggregateDaysOff(member.days).forEach(time => daysOff.push(time));
   });
   return daysOff;
-}
+};
 
-export const aggregateTeamDaysInDevelopment: Function = (startDate: number, endDate: number, daysOffArray: number[], teamMemberCount: number) => {
+export const aggregateTeamDaysInDevelopment: Function = (
+  startDate: number,
+  endDate: number,
+  daysOffArray: number[],
+  teamMemberCount: number
+) => {
   let daysInDevelopment = 0;
   for (let i = startDate; i <= endDate; i += 86400000) {
       const currentDay = new Date(i).getDay();

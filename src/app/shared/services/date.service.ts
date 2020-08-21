@@ -21,7 +21,7 @@ export class DateService {
     const startDate = this.startDate.setHours(0, 0, 0, 0);
     const endDate = this.endDate.setHours(0, 0, 0, 0);
     let daysOffArray;
-    switch(type) {
+    switch (type) {
       case 'cast':
         daysOffArray = aggregateDaysOff(daysOff);
         this.developmentDays = aggregateDaysInDevelopment(startDate, endDate, daysOffArray);
