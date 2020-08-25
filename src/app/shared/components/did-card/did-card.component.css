@@ -1,0 +1,24 @@
+.container {
+    color: white;
+    display: inline-flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.start-container {
+    background-color: green;
+    padding: 0.5rem;
+}
+.connector {
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 20%;
+}
+hr {
+    width: 100%;
+}
+.end-container {
+    background-color: indianred;
+    padding: 0.5rem;
+}

@@ -13,6 +13,8 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { DidDisplayComponent } from './components/did-display/did-display.component';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatIconModule } from '@angular/material/icon';
+import { DidCardComponent } from './components/did-card/did-card.component';
+import { PtoDisplayComponent } from './components/pto-display/pto-display.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { MatIconModule } from '@angular/material/icon';
     DisplayInfoComponent,
     DisplayModalComponent,
     InterstitialComponent,
-    GradedListItemComponent
+    GradedListItemComponent,
+    DidCardComponent,
+    PtoDisplayComponent
   ],
   imports: [
     CommonModule,
@@ -38,7 +42,9 @@ import { MatIconModule } from '@angular/material/icon';
     DisplayInfoComponent,
     DisplayModalComponent,
     InterstitialComponent,
-    GradedListItemComponent],
+    GradedListItemComponent,
+    DidCardComponent,
+    PtoDisplayComponent],
   entryComponents: [DisplayModalComponent],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })

@@ -1,0 +1,5 @@
+<div class="container">
+  <div class="card-container" *ngFor="let dayOff of daysOff">
+    <shared-did-card [endDate]="dayOff.end" [startDate]="dayOff.start"></shared-did-card>
+  </div>
+</div>

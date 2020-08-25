@@ -58,3 +58,10 @@ p {
 shared-graded-list-item {
     margin: 0.5rem 0;
 }
+.italics-subtitle {
+    font-size: 0.75rem;
+    font-style: italic;
+}
+.team-member {
+    padding-bottom: 0.5rem;
+}
