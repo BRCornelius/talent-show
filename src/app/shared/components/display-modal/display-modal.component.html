@@ -32,14 +32,10 @@
       <shared-graded-list-item *ngFor="let skill of data.item.skills" [type]="data.path" [gradedItem]="skill"></shared-graded-list-item>
     </div>
   </div>
-  <div class="members" *ngIf="data.path === 'teams'">
-    <h2>Team Members</h2>
-    <div *ngFor="let member of data.item.members" class="team-member">
-      <p>{{member.name}}<small class="italics-subtitle"><br/>Time Off:</small></p>
-      <shared-pto-display [daysOff]="member.days"></shared-pto-display>
-      <hr/>
-    </div>
-  </div>
+  <shared-pto-display
+    [type]="data.path"
+    [teamMembers]="data.item.members"
+    [teamMember]="data.item"></shared-pto-display>
   <shared-did-display
     [teamMembers]="data.item.members"
     [daysOff]="daysOffArray"

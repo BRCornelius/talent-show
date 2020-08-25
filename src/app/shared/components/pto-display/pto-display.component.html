@@ -1,5 +1,20 @@
-<div class="container">
-  <div class="card-container" *ngFor="let dayOff of daysOff">
-    <shared-did-card [endDate]="dayOff.end" [startDate]="dayOff.start"></shared-did-card>
+<div *ngIf="type === 'teams'">
+  <h2>Team Members</h2>
+  <div *ngFor="let member of teamMembers" class="team-member">
+    <p>{{member.name}}<small class="italics-subtitle"><br/>Time Off:</small></p>
+    <div class="container">
+      <div class="card-container" *ngFor="let dayOff of member.days">
+        <shared-did-card [endDate]="dayOff.end" [startDate]="dayOff.start"></shared-did-card>
+      </div>
+    </div>
+    <hr/>
+  </div>
+</div>
+<div *ngIf="type === 'cast'">
+  <h2>Days Off</h2>
+  <div class="container">
+    <div *ngFor="let dayOff of teamMember.days" class="card-container">
+      <shared-did-card [endDate]="dayOff.end" [startDate]="dayOff.start"></shared-did-card>
+    </div>
   </div>
 </div>

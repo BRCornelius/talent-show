@@ -9,10 +9,11 @@ export class PtoDisplayComponent implements OnInit {
 
   constructor() { }
 
-  @Input() daysOff;
+  @Input() teamMember;
+  @Input() teamMembers;
+  @Input() type;
 
   ngOnInit() {
-    console.log(this.daysOff)
   }
 
 }
