@@ -20,7 +20,7 @@ export class DisplayModalComponent implements OnInit {
   ngOnInit() {
     switch (this.data.path) {
       case 'cast':
-        this.daysOffArray = this.data.days;
+        this.daysOffArray = this.data.item.days;
         this.teamMemberCount = 0;
         break;
       case 'teams':

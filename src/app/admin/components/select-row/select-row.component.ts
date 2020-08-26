@@ -1,7 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { TeamService } from 'src/app/team/services/team.service';
 import { AdminService } from '../../services/admin.service';
-import { getInactiveTeams } from '../../util/utilities';
 import { IndividualService } from '../../services/individual.service';
 
 @Component({

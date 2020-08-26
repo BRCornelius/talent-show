@@ -3,7 +3,7 @@ import { IEmployee } from 'src/app/cast/models';
 import { HttpClient } from '@angular/common/http';
 import { Subscription } from 'rxjs';
 import { TopicService } from './topic.service';
-import { removeElementByKey, addElementByKey, setInactiveElements, getInactiveTeams } from '../util/utilities';
+import { removeElementByKey, addElementByKey, setInactiveElements } from '../util/utilities';
 import { TeamService } from 'src/app/team/services/team.service';
 
 @Injectable({
@@ -32,15 +32,6 @@ export class AdminService {
     })
   getInactiveClients: Function = (employeeClients) => this.topic.clients
     ? setInactiveElements(this.topic.clients, employeeClients)
-    : []
-  getInactiveSkills: Function = (employeeSkills) => this.topic.skills
-    ? setInactiveElements(this.topic.skills, employeeSkills)
-    : []
-  getInactiveTeams: Function = (employeeTeam) => this.team.teams
-    ? getInactiveTeams(this.team.teams, employeeTeam)
-    : []
-  getInactiveDepartments: Function = (employeeDepartment) => this.topic.departments
-    ? getInactiveTeams(this.topic.departments, employeeDepartment)
     : []
   updateActiveEmployeeClients: Function = (item, action) => {
     switch (action) {
