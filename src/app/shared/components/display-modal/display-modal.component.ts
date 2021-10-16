@@ -30,6 +30,7 @@ export class DisplayModalComponent implements OnInit {
         break;
       default:
     }
+    document.getElementById("face-photo").scrollIntoView()
   }
 
 }

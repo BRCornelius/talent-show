@@ -10,6 +10,7 @@
     <input class="text-input" id="photo" name="photo" placeholder={{admin.activeTeam.photo}}
     required="!edit" minlength="4" [(ngModel)]="photo" (ngModelChange)="photo=$event">
   </div>
+  <admin-non-graded-list></admin-non-graded-list>
   <div class="button-container">
     <button (click)="showName()">Submit</button>
   </div>

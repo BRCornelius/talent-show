@@ -16,6 +16,7 @@ import { TopicService } from './services/topic.service';
 import { GradedListComponent } from './components/graded-list/graded-list.component';
 import { InputRowComponent } from './components/input-row/input-row.component';
 import { SelectRowComponent } from './components/select-row/select-row.component';
+import { NonGradedListComponent } from './components/non-graded-list/non-graded-list.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { SelectRowComponent } from './components/select-row/select-row.component
     GradedListComponent,
     InputRowComponent,
     SelectRowComponent,
+    NonGradedListComponent,
   ],
   imports: [
     CommonModule,
